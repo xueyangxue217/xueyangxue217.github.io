@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { useI18n } from './i18n';
 import CoverIntro from './components/CoverIntro';
@@ -33,11 +33,33 @@ const fade = {
   transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
 };
 
+const VIEWS = ['home', 'about', 'work', 'life', 'contact'];
+const viewFromHash = () => {
+  const h = window.location.hash.replace('#', '');
+  return VIEWS.includes(h) ? h : 'home';
+};
+
 export default function App() {
   const [entered, setEntered] = useState(false);
-  const [view, setView] = useState('home'); // 'home' | 'about' | 'work' | 'life' | 'contact'
+  const [view, setView] = useState(viewFromHash); // 'home' | 'about' | 'work' | 'life' | 'contact'
 
-  const goHome = () => setView('home');
+  // Sync the section with the URL hash so the browser's back/forward buttons
+  // (and shareable #section links) work even though this is a single page.
+  useEffect(() => {
+    window.history.replaceState({ view }, '', `#${view}`);
+    const onPop = () => setView(viewFromHash());
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const navigate = (v) => {
+    if (v === view) return;
+    setView(v);
+    window.history.pushState({ view: v }, '', `#${v}`);
+  };
+
+  const goHome = () => navigate('home');
 
   return (
     <>
@@ -50,7 +72,7 @@ export default function App() {
         <AnimatePresence mode="wait">
           {view === 'home' && (
             <motion.div key="home" {...fade}>
-              <Home onSelect={setView} />
+              <Home onSelect={navigate} />
             </motion.div>
           )}
           {view === 'about' && (
