@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { useI18n } from './i18n';
 import CoverIntro from './components/CoverIntro';
-import AmbientToggle from './components/AmbientToggle';
 import Nav from './sections/Nav';
 import Home from './sections/Home';
 import AboutMe from './sections/AboutMe';
@@ -76,8 +75,6 @@ export default function App() {
           )}
         </AnimatePresence>
       </main>
-
-      {entered && <AmbientToggle />}
     </>
   );
 }
