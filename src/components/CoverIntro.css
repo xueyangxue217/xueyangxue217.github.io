@@ -1,0 +1,99 @@
+.cover {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  overflow: hidden;
+  cursor: pointer;
+  background: #f8f6f1;
+}
+
+/* warm paper + watercolour bloom fills the screen */
+.cover__water {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* fine paper grain, matching the site background */
+.cover__grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.85;
+  mix-blend-mode: multiply;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.68' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.11'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='340' height='340'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.24' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23m)' opacity='0.05'/%3E%3C/svg%3E");
+  background-size: 150px 150px, 340px 340px;
+}
+
+/* subtle centre lift + soft vignette for a paper-edge feel */
+.cover__veil {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(120% 90% at 50% 46%, rgba(255, 255, 255, 0.25), transparent 55%),
+    radial-gradient(150% 130% at 50% 50%, transparent 62%, rgba(120, 98, 78, 0.10));
+  pointer-events: none;
+}
+
+.cover__center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+  pointer-events: none;
+  padding: 0 24px;
+}
+
+.cover__welcome {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-optical-sizing: auto;
+  font-size: clamp(34px, 8vw, 108px);
+  line-height: 1.05;
+  letter-spacing: 0.005em;
+  margin: 0;
+  white-space: nowrap;   /* keep on one line */
+}
+
+.cover__name {
+  display: block;
+  margin-top: clamp(16px, 1.8vw, 26px);
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(15px, 1.3vw, 20px);
+  letter-spacing: 0.42em;
+  text-indent: 0.42em; /* balance the trailing letter-spacing */
+  text-transform: uppercase;
+  color: #6a5f54;
+}
+
+.cover__hint {
+  position: absolute;
+  left: 50%;
+  bottom: 42px;
+  transform: translateX(-50%);
+  z-index: 2;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(90, 78, 66, 0.7);
+  animation: cover-blink 2.6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes cover-blink {
+  0%, 100% { opacity: 0.45; }
+  50% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cover__hint { animation: none; }
+  .cover__water ellipse { animation: none !important; }
+}

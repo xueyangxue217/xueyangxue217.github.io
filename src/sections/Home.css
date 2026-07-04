@@ -1,0 +1,103 @@
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: 120px 90px;
+}
+
+.home__eyebrow {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--text);
+  max-width: 1460px;
+  margin: 0 auto clamp(44px, 5vw, 80px);
+}
+
+.home__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(26px, 2.6vw, 48px);
+  align-items: start;
+  max-width: 1460px;
+  margin-inline: auto;
+}
+
+.hc { text-align: center; }
+.hc__btn {
+  display: block;
+  width: 100%;
+  background: none;
+  border: 0;
+  padding: 0;
+  color: inherit;
+  cursor: pointer;
+  text-align: center;
+}
+.hc__btn:hover .hc__title { color: var(--hover); }
+.hc__title { transition: color 0.25s ease; }
+
+/* tilt card holder */
+.hc__card {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  margin-bottom: 24px;
+}
+/* white passe-partout mat frame — the photo sits inside a white border with a
+   hairline edge + soft depth, like a matted gallery print (tilts as one unit) */
+.hc__card .tilted-card-inner {
+  box-sizing: border-box;
+  background: #fff;
+  padding: 11px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  box-shadow: 0 22px 48px -26px rgba(60, 45, 35, 0.4);
+}
+.hc__card .tilted-card-img {
+  position: relative;
+  border: 0;
+  border-radius: 1px;
+  filter: saturate(0.96) contrast(1.02) brightness(1.01);
+}
+
+/* big number NN /04 */
+.hc__num {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: clamp(30px, 3.1vw, 50px);
+  line-height: 1;
+  color: var(--text);
+  letter-spacing: 0.01em;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+}
+.hc__of {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--text);
+}
+
+.hc__title {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin: 22px 0 0;
+  line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+  .home__grid { grid-template-columns: repeat(2, 1fr); row-gap: 56px; }
+}
+@media (max-width: 520px) {
+  .home__grid { grid-template-columns: 1fr; }
+}

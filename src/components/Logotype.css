@@ -1,0 +1,21 @@
+.logotype {
+  --lt-size: 23px;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: var(--lt-size);
+  letter-spacing: 0.3em;
+  text-indent: 0.3em; /* balance trailing letter-spacing */
+  text-transform: uppercase;
+  color: var(--text);
+  line-height: 1;
+  cursor: pointer;
+}
+.logotype--md { --lt-size: 23px; }
+.logotype--lg { --lt-size: 64px; }
+
+.lt-word { display: inline-flex; align-items: center; }

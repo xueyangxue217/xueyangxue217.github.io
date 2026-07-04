@@ -1,0 +1,197 @@
+{
+  "projects": [
+    {
+      "slug": "proj-1",
+      "title": "戛纳电影节中国电影之夜",
+      "cover": "assets/projects/proj-1/02.jpg",
+      "images": [
+        "assets/projects/proj-1/01.jpg",
+        "assets/projects/proj-1/02.jpg",
+        "assets/projects/proj-1/03.jpg",
+        "assets/projects/proj-1/04.jpg",
+        "assets/projects/proj-1/05.jpg",
+        "assets/projects/proj-1/06.jpg",
+        "assets/projects/proj-1/07.jpg",
+        "assets/projects/proj-1/08.jpg",
+        "assets/projects/proj-1/09.jpg",
+        "assets/projects/proj-1/10.jpg"
+      ],
+      "landscape": [
+        "assets/projects/proj-1/02.jpg",
+        "assets/projects/proj-1/03.jpg",
+        "assets/projects/proj-1/04.jpg",
+        "assets/projects/proj-1/05.jpg",
+        "assets/projects/proj-1/06.jpg",
+        "assets/projects/proj-1/07.jpg",
+        "assets/projects/proj-1/08.jpg",
+        "assets/projects/proj-1/09.jpg",
+        "assets/projects/proj-1/10.jpg"
+      ]
+    },
+    {
+      "slug": "proj-2",
+      "title": "瑞安房地产入汉20周年",
+      "cover": "assets/projects/proj-2/01.jpg",
+      "images": [
+        "assets/projects/proj-2/01.jpg",
+        "assets/projects/proj-2/02.jpg"
+      ],
+      "landscape": [
+        "assets/projects/proj-2/01.jpg",
+        "assets/projects/proj-2/02.jpg"
+      ]
+    },
+    {
+      "slug": "proj-3",
+      "title": "武汉城市更新践行之路系列活动",
+      "cover": "assets/projects/proj-3/03.jpg",
+      "images": [
+        "assets/projects/proj-3/01.jpg",
+        "assets/projects/proj-3/02.jpg",
+        "assets/projects/proj-3/03.jpg",
+        "assets/projects/proj-3/04.jpg",
+        "assets/projects/proj-3/05.jpg",
+        "assets/projects/proj-3/06.jpg",
+        "assets/projects/proj-3/07.jpg",
+        "assets/projects/proj-3/08.jpg"
+      ],
+      "landscape": [
+        "assets/projects/proj-3/03.jpg",
+        "assets/projects/proj-3/04.jpg",
+        "assets/projects/proj-3/05.jpg",
+        "assets/projects/proj-3/06.jpg",
+        "assets/projects/proj-3/07.jpg",
+        "assets/projects/proj-3/08.jpg"
+      ]
+    },
+    {
+      "slug": "proj-4",
+      "title": "武汉网球公开赛",
+      "cover": "assets/projects/proj-4/01.jpg",
+      "images": [
+        "assets/projects/proj-4/01.jpg",
+        "assets/projects/proj-4/02.jpg",
+        "assets/projects/proj-4/03.jpg",
+        "assets/projects/proj-4/04.jpg",
+        "assets/projects/proj-4/05.jpg",
+        "assets/projects/proj-4/06.jpg",
+        "assets/projects/proj-4/07.jpg"
+      ],
+      "landscape": [
+        "assets/projects/proj-4/01.jpg",
+        "assets/projects/proj-4/02.jpg",
+        "assets/projects/proj-4/03.jpg",
+        "assets/projects/proj-4/04.jpg",
+        "assets/projects/proj-4/05.jpg",
+        "assets/projects/proj-4/06.jpg",
+        "assets/projects/proj-4/07.jpg"
+      ]
+    },
+    {
+      "slug": "proj-5",
+      "title": "中法文化之春",
+      "cover": "assets/projects/proj-5/01.jpg",
+      "images": [
+        "assets/projects/proj-5/01.jpg",
+        "assets/projects/proj-5/02.jpg",
+        "assets/projects/proj-5/03.jpg",
+        "assets/projects/proj-5/04.jpg",
+        "assets/projects/proj-5/05.jpg",
+        "assets/projects/proj-5/06.jpg",
+        "assets/projects/proj-5/07.jpg",
+        "assets/projects/proj-5/08.jpg",
+        "assets/projects/proj-5/09.jpg",
+        "assets/projects/proj-5/10.jpg",
+        "assets/projects/proj-5/11.jpg"
+      ],
+      "landscape": [
+        "assets/projects/proj-5/01.jpg",
+        "assets/projects/proj-5/02.jpg",
+        "assets/projects/proj-5/03.jpg",
+        "assets/projects/proj-5/04.jpg",
+        "assets/projects/proj-5/05.jpg",
+        "assets/projects/proj-5/06.jpg",
+        "assets/projects/proj-5/07.jpg",
+        "assets/projects/proj-5/08.jpg",
+        "assets/projects/proj-5/09.jpg",
+        "assets/projects/proj-5/10.jpg",
+        "assets/projects/proj-5/11.jpg"
+      ]
+    },
+    {
+      "slug": "proj-6",
+      "title": "品牌伴手礼",
+      "cover": "assets/projects/proj-6/08.jpg",
+      "images": [
+        "assets/projects/proj-6/01.jpg",
+        "assets/projects/proj-6/02.jpg",
+        "assets/projects/proj-6/03.jpg",
+        "assets/projects/proj-6/04.jpg",
+        "assets/projects/proj-6/05.jpg",
+        "assets/projects/proj-6/06.jpg",
+        "assets/projects/proj-6/07.jpg",
+        "assets/projects/proj-6/08.jpg",
+        "assets/projects/proj-6/09.jpg",
+        "assets/projects/proj-6/10.jpg",
+        "assets/projects/proj-6/11.jpg"
+      ],
+      "landscape": [
+        "assets/projects/proj-6/08.jpg",
+        "assets/projects/proj-6/09.jpg",
+        "assets/projects/proj-6/10.jpg",
+        "assets/projects/proj-6/11.jpg"
+      ]
+    }
+  ],
+  "posters": [
+    "assets/posters/01.jpg",
+    "assets/posters/02.jpg",
+    "assets/posters/03.jpg",
+    "assets/posters/04.jpg",
+    "assets/posters/05.jpg",
+    "assets/posters/06.jpg",
+    "assets/posters/07.jpg",
+    "assets/posters/08.jpg",
+    "assets/posters/09.jpg",
+    "assets/posters/10.jpg",
+    "assets/posters/11.jpg",
+    "assets/posters/12.jpg",
+    "assets/posters/13.jpg",
+    "assets/posters/14.jpg",
+    "assets/posters/15.jpg",
+    "assets/posters/16.jpg",
+    "assets/posters/17.jpg",
+    "assets/posters/18.jpg",
+    "assets/posters/19.jpg",
+    "assets/posters/20.jpg",
+    "assets/posters/21.jpg",
+    "assets/posters/22.jpg",
+    "assets/posters/23.jpg",
+    "assets/posters/24.jpg",
+    "assets/posters/25.jpg",
+    "assets/posters/26.jpg",
+    "assets/posters/27.jpg",
+    "assets/posters/28.jpg",
+    "assets/posters/29.jpg",
+    "assets/posters/30.jpg",
+    "assets/posters/31.jpg",
+    "assets/posters/32.jpg",
+    "assets/posters/33.jpg",
+    "assets/posters/34.jpg",
+    "assets/posters/35.jpg"
+  ],
+  "life": [
+    "assets/life/01.jpg",
+    "assets/life/02.jpg",
+    "assets/life/03.jpg",
+    "assets/life/04.jpg",
+    "assets/life/05.jpg",
+    "assets/life/06.jpg",
+    "assets/life/07.jpg",
+    "assets/life/08.jpg",
+    "assets/life/09.jpg",
+    "assets/life/10.jpg",
+    "assets/life/11.jpg",
+    "assets/life/12.jpg"
+  ]
+}

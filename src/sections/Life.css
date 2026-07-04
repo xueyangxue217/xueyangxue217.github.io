@@ -1,0 +1,298 @@
+.life {
+  --life-red: #e5402c;
+  position: relative;
+  min-height: 100vh;
+  padding-block: 130px 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.life__back {
+  align-self: flex-start;
+  background: none; border: 0; color: var(--text-dim);
+  font-size: 13px; letter-spacing: 0.08em; padding: 6px 0;
+  margin-bottom: clamp(40px, 5vw, 80px); transition: color 0.2s ease;
+}
+.life__back:hover { color: var(--text); }
+
+.life__cols {
+  flex: 1;
+  width: 100%;
+  max-width: 1180px;          /* keep the two sides visually bridged on wide screens */
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(40px, 4vw, 72px);
+  align-items: center;
+}
+
+/* left */
+.life__quote {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(44px, 5.5vw, 92px);
+  line-height: 1.05;
+  color: var(--life-red);
+  margin: 0;
+  white-space: nowrap;
+}
+.life__script {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-size: 1.35em;
+  padding-left: 0.08em;
+}
+
+.life__list {
+  list-style: none;
+  margin: clamp(40px, 5vw, 72px) 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.life__item {
+  display: flex;
+  align-items: baseline;
+  gap: 26px;
+  background: none;
+  border: 0;
+  padding: 10px 0;
+  color: var(--text);
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), color 0.25s ease;
+}
+.life__idx {
+  font-family: var(--font-serif);
+  font-size: 12px;
+  color: #c6c8ce;              /* smaller & lighter — lets the Chinese lead */
+  letter-spacing: 0.06em;
+  transition: color 0.25s ease;
+}
+.life__label {
+  /* default = Chinese: 思源宋体 serif, no forced uppercase (does nothing to 汉字) */
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 22px;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  flex: 0 0 auto;
+}
+/* English only: sans + all-caps wide tracking, matching the "ABOUT ME" eyebrow */
+html[lang="en"] .life__label {
+  font-family: var(--font-sans);
+  font-size: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+/* description — revealed on hover with a soft slide + fade */
+.life__desc {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  color: var(--text-dim);
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity 0.45s ease, transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+.life__desc::before {
+  content: "— ";
+  color: var(--text-faint);
+}
+.life__item:hover {
+  transform: translateX(14px);
+  color: var(--hover);
+}
+.life__item:hover .life__idx { color: var(--hover); }
+.life__item:hover .life__desc { opacity: 1; transform: translateX(0); }
+
+/* AI tile is clickable — a small accented mark hints at the overlay */
+.life__item--link { cursor: pointer; }
+.life__link-mark {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: var(--accent);
+  align-self: center;
+  transform: translateY(-1px);
+  opacity: 0.7;
+  transition: opacity 0.25s ease, transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.life__item--link:hover .life__link-mark { opacity: 1; transform: translate(3px, -3px); }
+
+/* ─── AI lab overlay ─────────────────────────────────────── */
+.ailab {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(20px, 4vw, 56px);
+  background: rgba(28, 22, 18, 0.52);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+.ailab__panel {
+  position: relative;
+  width: 100%;
+  max-width: 940px;
+  max-height: 88vh;
+  overflow-y: auto;
+  padding: clamp(34px, 4vw, 60px) clamp(26px, 4vw, 60px) clamp(34px, 4vw, 54px);
+  border-radius: 4px;
+  background:
+    radial-gradient(120% 80% at 50% 0%, rgba(193, 91, 60, 0.05) 0%, transparent 60%),
+    #f7f1e8;
+  box-shadow: 0 40px 120px rgba(40, 28, 20, 0.32);
+}
+.ailab__close {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  background: none;
+  border: 0;
+  color: var(--text-dim);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  padding: 6px 8px;
+  transition: color 0.2s ease;
+}
+.ailab__close:hover { color: var(--accent); }
+
+.ailab__head {
+  max-width: 620px;
+  margin-bottom: clamp(30px, 3.5vw, 46px);
+}
+.ailab__eyebrow {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin: 0 0 14px;
+}
+.ailab__title {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(28px, 3.4vw, 44px);
+  line-height: 1.12;
+  color: var(--text);
+  margin: 0 0 16px;
+}
+.ailab__intro {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-dim);
+  margin: 0;
+}
+
+.ailab__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(20px, 2.6vw, 34px);
+}
+.ailab__card {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(22px, 2.4vw, 30px);
+  border: 1px solid rgba(60, 48, 40, 0.14);
+  border-radius: 3px;
+  background: rgba(255, 253, 249, 0.5);
+  transition: border-color 0.25s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.ailab__card:hover {
+  border-color: rgba(193, 91, 60, 0.4);
+  transform: translateY(-3px);
+}
+.ailab__card-top { margin-bottom: 16px; }
+.ailab__name {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 26px;
+  letter-spacing: 0.06em;
+  color: var(--text);
+  margin: 0 0 6px;
+}
+.ailab__tag {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  margin: 0;
+}
+.ailab__desc {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.72;
+  color: var(--text-dim);
+  margin: 0 0 20px;
+  flex: 1;
+}
+.ailab__stack {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 0 0 22px;
+  padding: 0;
+}
+.ailab__chip {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--text-dim);
+  padding: 4px 10px;
+  border: 1px solid rgba(60, 48, 40, 0.16);
+  border-radius: 20px;
+}
+.ailab__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.ailab__link {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: var(--text);
+  padding: 9px 16px;
+  border: 1px solid rgba(60, 48, 40, 0.22);
+  border-radius: 26px;
+  transition: background 0.22s ease, color 0.22s ease, border-color 0.22s ease;
+}
+.ailab__link:hover { border-color: var(--text); }
+.ailab__link--primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fdf6ee;
+}
+.ailab__link--primary:hover {
+  background: #a94b30;
+  border-color: #a94b30;
+  color: #fdf6ee;
+}
+
+@media (max-width: 720px) {
+  .ailab__grid { grid-template-columns: 1fr; }
+}
+
+/* right — photo stack */
+.life__right { display: flex; justify-content: center; }
+.life__stack {
+  width: clamp(300px, 30vw, 420px);
+  aspect-ratio: 4 / 5;
+}
+
+@media (max-width: 920px) {
+  .life__cols { grid-template-columns: 1fr; gap: 56px; }
+  .life__quote { font-size: clamp(38px, 10vw, 68px); }
+  .life__right { order: -1; }
+}
