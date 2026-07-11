@@ -1,6 +1,7 @@
 import { useI18n } from '../i18n';
 import { useUI } from '../ui';
 import Reveal from '../components/Reveal';
+import Rise from '../components/Rise';
 import './Contact.css';
 
 const MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=Wuhan+China';
@@ -23,11 +24,11 @@ export default function Contact() {
   return (
     <div className="co">
       <div className="shell co__inner">
-        <Reveal className="co__head">
-          <p className="eyebrow">{c.eyebrow}</p>
-          <h1 className="co__title">{c.title}</h1>
-          <p className="co__blurb">{c.blurb}</p>
-        </Reveal>
+        <div className="co__head">
+          <Reveal><p className="eyebrow">{c.eyebrow}</p></Reveal>
+          <Rise as="h1" className="co__title" delay={0.05}>{c.title}</Rise>
+          <Reveal delay={0.1}><p className="co__blurb">{c.blurb}</p></Reveal>
+        </div>
 
         <Reveal className="co__channels" delay={0.08}>
           {rows.map((r, i) => (

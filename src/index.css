@@ -105,6 +105,14 @@ section { position: relative; }
   margin: 0;
 }
 
+/* trailing arrows (→ ↗) nudge on hover of their link/button — a subtle,
+   consistent micro-interaction across the site */
+a [aria-hidden], button [aria-hidden] {
+  display: inline-block;
+  transition: transform 0.25s var(--ease);
+}
+a:hover [aria-hidden], button:hover [aria-hidden] { transform: translate(3px, -1px); }
+
 ::selection { background: var(--accent-soft); color: var(--accent); }
 
 /* scrollbar */

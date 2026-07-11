@@ -2,8 +2,11 @@ import { useEffect, useMemo, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { useI18n } from '../i18n';
 import Reveal from '../components/Reveal';
+import Rise from '../components/Rise';
 import media from '../data/media.json';
 import './Work.css';
+
+const EASE = [0.22, 1, 0.36, 1];
 
 const asset = (p) => (p ? `/${p.replace(/^\//, '')}` : '');
 
@@ -69,15 +72,17 @@ export default function Work({ onBack }) {
         <div className="shell wk__cs">
           <button className="wk__back" onClick={() => setOpenSlug(null)}>{w.allWork}</button>
 
-          <Reveal>
-            {active.cat && <p className="eyebrow">{active.cat}</p>}
-            <h1 className="wk__cs-title">{active.title}</h1>
-            {active.meta && <p className="wk__cs-meta">{active.meta}</p>}
-          </Reveal>
+          <div>
+            {active.cat && <Reveal><p className="eyebrow">{active.cat}</p></Reveal>}
+            <Rise as="h1" className="wk__cs-title" onLoad delay={0.05}>{active.title}</Rise>
+            {active.meta && <Reveal delay={0.12}><p className="wk__cs-meta">{active.meta}</p></Reveal>}
+          </div>
 
-          <Reveal className="wk__cs-cover" delay={0.05}>
+          <motion.div className="wk__cs-cover"
+            initial={{ opacity: 0, scale: 1.04 }} animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.1, ease: EASE }}>
             <img src={active.cover} alt={active.title} />
-          </Reveal>
+          </motion.div>
 
           {active.overview && (
             <Reveal className="wk__cs-body">
@@ -128,17 +133,23 @@ export default function Work({ onBack }) {
   return (
     <div className="wk">
       <div className="shell wk__index">
-        <Reveal className="wk__head">
-          <p className="eyebrow">{w.eyebrow}</p>
-          <h1 className="wk__title">{w.title}</h1>
-          <p className="wk__sub">{w.sub}</p>
-        </Reveal>
+        <div className="wk__head">
+          <Reveal><p className="eyebrow">{w.eyebrow}</p></Reveal>
+          <Rise as="h1" className="wk__title" delay={0.05}>{w.title}</Rise>
+          <Reveal delay={0.1}><p className="wk__sub">{w.sub}</p></Reveal>
+        </div>
 
         <div className="wk__grid">
           {projects.map((p, i) => (
             <Reveal key={p.slug} delay={(i % 3) * 0.07}>
               <button className="pc" onClick={() => setOpenSlug(p.slug)}>
-                <div className="pc__img"><img src={p.cover} alt={p.title} loading="lazy" /></div>
+                <motion.div className="pc__img"
+                  initial={{ opacity: 0, scale: 1.06 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.8, ease: EASE }}>
+                  <img src={p.cover} alt={p.title} loading="lazy" />
+                </motion.div>
                 {p.cat && <p className="pc__cat">{p.cat}</p>}
                 <h3 className="pc__title">{p.title}</h3>
                 {p.meta && <p className="pc__meta">{p.meta}</p>}

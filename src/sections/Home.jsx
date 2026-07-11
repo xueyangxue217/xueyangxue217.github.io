@@ -1,8 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
+import { motion } from 'motion/react';
 import { useI18n } from '../i18n';
 import { useUI } from '../ui';
 import Reveal from '../components/Reveal';
+import Rise from '../components/Rise';
 import './Home.css';
+
+const EASE = [0.22, 1, 0.36, 1];
 
 // wide covers for the three featured case studies (reuse the hero crops)
 const FEAT_COVER = {
@@ -68,14 +72,26 @@ export default function Home({ onNavigate }) {
     <div className="lp">
       {/* ── Hero ── */}
       <header className="lp__hero shell">
-        <Reveal className="lp__hero-text">
-          <p className="lp__eyebrow">{h.hero.eyebrow}</p>
+        <div className="lp__hero-text">
+          <motion.p className="lp__eyebrow"
+            initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: EASE }}>
+            {h.hero.eyebrow}
+          </motion.p>
           <h1 className="lp__h1">
             {h.hero.titleLines.map((line, i) => (
-              <span key={i} className="lp__h1-line">{line}</span>
+              <span key={i} className="lp__h1-line">
+                <motion.span className="lp__h1-inner"
+                  initial={{ y: '115%' }} animate={{ y: 0 }}
+                  transition={{ duration: 0.75, delay: 0.12 + i * 0.09, ease: EASE }}>
+                  {line}
+                </motion.span>
+              </span>
             ))}
           </h1>
-          <p className="lp__sub">
+          <motion.p className="lp__sub"
+            initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.45, ease: EASE }}>
             {h.hero.subEm && h.hero.sub.includes(h.hero.subEm) ? (
               <>
                 {h.hero.sub.split(h.hero.subEm)[0]}
@@ -83,16 +99,20 @@ export default function Home({ onNavigate }) {
                 {h.hero.sub.split(h.hero.subEm)[1]}
               </>
             ) : h.hero.sub}
-          </p>
-          <div className="lp__cta-row">
+          </motion.p>
+          <motion.div className="lp__cta-row"
+            initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.55, ease: EASE }}>
             <button className="btn btn--solid" onClick={() => onNavigate('work')}>{h.hero.ctaWork}</button>
-          </div>
-        </Reveal>
-        <Reveal className="lp__portrait" delay={0.1}>
+          </motion.div>
+        </div>
+        <motion.div className="lp__portrait"
+          initial={{ opacity: 0, scale: 1.04 }} animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.9, delay: 0.2, ease: EASE }}>
           <div className="lp__portrait-img">
             <img src="/assets/home/portrait.jpg" alt={h.hero.portraitAlt} />
           </div>
-        </Reveal>
+        </motion.div>
       </header>
 
       {/* ── Trust numbers ── */}
@@ -104,17 +124,19 @@ export default function Home({ onNavigate }) {
 
       {/* ── Featured work ── */}
       <section className="lp__sec shell">
-        <Reveal>
-          <p className="eyebrow">{h.featuredEyebrow}</p>
-          <h2 className="section-title">{h.featuredTitle}</h2>
-        </Reveal>
+        <Reveal><p className="eyebrow">{h.featuredEyebrow}</p></Reveal>
+        <Rise as="h2" className="section-title" delay={0.05}>{h.featuredTitle}</Rise>
         <div className="lp__work">
           {h.featured.map((f, i) => (
             <Reveal key={f.slug} delay={i * 0.08}>
               <button className="wc" onClick={() => onNavigate('work')}>
-                <div className="wc__img">
+                <motion.div className="wc__img"
+                  initial={{ opacity: 0, scale: 1.06 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.8, ease: EASE }}>
                   <img src={FEAT_COVER[f.slug]} alt={f.title} loading="lazy" />
-                </div>
+                </motion.div>
                 <p className="wc__cat">{f.cat}</p>
                 <h3 className="wc__title">{f.title}</h3>
                 <p className="wc__meta">{f.meta}</p>
@@ -127,10 +149,8 @@ export default function Home({ onNavigate }) {
       {/* ── Services ── */}
       <section id="services" className="lp__services">
         <div className="shell">
-          <Reveal>
-            <p className="eyebrow">{h.servicesEyebrow}</p>
-            <h2 className="section-title">{h.servicesTitle}</h2>
-          </Reveal>
+          <Reveal><p className="eyebrow">{h.servicesEyebrow}</p></Reveal>
+          <Rise as="h2" className="section-title" delay={0.05}>{h.servicesTitle}</Rise>
           <div className="lp__svc">
             {h.services.map((s, i) => (
               <Reveal key={s.n} className="svc" delay={(i % 2) * 0.06}>

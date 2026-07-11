@@ -1,6 +1,7 @@
 import { useI18n } from '../i18n';
 import { useUI } from '../ui';
 import Reveal from '../components/Reveal';
+import Rise from '../components/Rise';
 import './AboutMe.css';
 
 export default function AboutMe() {
@@ -22,12 +23,14 @@ export default function AboutMe() {
           <Reveal className="ab__portrait">
             <img src="/assets/about/portrait.jpg" alt={a.name} loading="lazy" />
           </Reveal>
-          <Reveal className="ab__lede" delay={0.08}>
-            <h1 className="ab__name">{a.name}</h1>
-            <p className="ab__title">{a.title}</p>
-            <p className="ab__lead">{a.lead}</p>
-            {a.bio.map((p, i) => <p key={i} className="ab__bio">{p}</p>)}
-          </Reveal>
+          <div className="ab__lede">
+            <Rise as="h1" className="ab__name" delay={0.05}>{a.name}</Rise>
+            <Reveal delay={0.14}>
+              <p className="ab__title">{a.title}</p>
+              <p className="ab__lead">{a.lead}</p>
+              {a.bio.map((p, i) => <p key={i} className="ab__bio">{p}</p>)}
+            </Reveal>
+          </div>
         </div>
 
         {/* quick facts */}

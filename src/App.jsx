@@ -1,6 +1,6 @@
 import './App.css';
 import { useEffect, useState } from 'react';
-import { AnimatePresence, motion } from 'motion/react';
+import { AnimatePresence, motion, MotionConfig } from 'motion/react';
 import { useI18n } from './i18n';
 import Nav from './sections/Nav';
 import Home from './sections/Home';
@@ -46,7 +46,7 @@ export default function App() {
   const goHome = () => navigate('home');
 
   return (
-    <>
+    <MotionConfig reducedMotion="user">
       <Nav view={view} onNavigate={navigate} />
       <main>
         <AnimatePresence mode="wait">
@@ -77,6 +77,6 @@ export default function App() {
           )}
         </AnimatePresence>
       </main>
-    </>
+    </MotionConfig>
   );
 }

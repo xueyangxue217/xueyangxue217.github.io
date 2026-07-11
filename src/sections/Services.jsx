@@ -1,5 +1,6 @@
 import { useI18n } from '../i18n';
 import Reveal from '../components/Reveal';
+import Rise from '../components/Rise';
 import './Services.css';
 
 export default function Services({ onNavigate }) {
@@ -9,11 +10,11 @@ export default function Services({ onNavigate }) {
   return (
     <div className="sv">
       <div className="shell sv__inner">
-        <Reveal className="sv__head">
-          <p className="eyebrow">{s.eyebrow}</p>
-          <h1 className="sv__title">{s.title}</h1>
-          <p className="sv__intro">{s.intro}</p>
-        </Reveal>
+        <div className="sv__head">
+          <Reveal><p className="eyebrow">{s.eyebrow}</p></Reveal>
+          <Rise as="h1" className="sv__title" delay={0.05}>{s.title}</Rise>
+          <Reveal delay={0.1}><p className="sv__intro">{s.intro}</p></Reveal>
+        </div>
 
         {/* expanded services */}
         <div className="sv__list">
