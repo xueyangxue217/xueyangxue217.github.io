@@ -11,7 +11,7 @@ const FEAT_COVER = {
   'proj-4': '/assets/hero/wuhanopen.jpg',
 };
 
-const EMAIL = 'yangxue-217@hotmail.com';
+const EMAIL = 'xueyangxue217@gmail.com';
 
 // count a number up from 0 → target when it first scrolls into view
 function useCountUp(target, run) {
