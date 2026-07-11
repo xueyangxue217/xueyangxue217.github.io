@@ -8,7 +8,7 @@ const KEY = 'yx-lang';
 const I18nContext = createContext(null);
 
 export function I18nProvider({ children }) {
-  const [lang, setLang] = useState(() => localStorage.getItem(KEY) || 'zh');
+  const [lang, setLang] = useState(() => localStorage.getItem(KEY) || 'en');
 
   useEffect(() => {
     localStorage.setItem(KEY, lang);

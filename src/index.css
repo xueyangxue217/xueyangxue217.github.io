@@ -1,26 +1,38 @@
 :root {
-  /* palette — light, restrained, high-end white with a cool tech accent */
-  --bg: #f7f6f2;
-  --bg-2: #efece5;
-  --surface: #ffffff;
-  --surface-2: #f6f4ef;
-  --line: #e7e3db;
-  --text: #241f1b;
-  --text-dim: #63594f;
-  --text-faint: #9c938a;
-  --accent: #c15b3c;
-  --accent-soft: #c15b3c;
-  --glow: rgba(193, 91, 60, 0.28);
-  --rgb-accent: 193, 91, 60;
-  --hover: #9a8877; /* matches the cover "welcome" text — used for hover text site-wide */
+  /* ── Ivory + Oxblood design tokens ─────────────────────────────
+     Premium consulting palette: warm near-white base, ink text,
+     a single restrained oxblood accent (~5% of the surface). */
+  --bg: #fcfbf8;          /* ivory page background */
+  --surface: #ffffff;     /* cards / panels */
+  --band: #f7f5ef;        /* alternating section band */
+  --ink: #171717;         /* headings / primary text */
+  --muted: #6e6a62;       /* body / secondary */
+  --faint: #9a9078;       /* eyebrows, footnotes, footer */
+  --border: #efebe1;      /* hairlines / dividers */
+  --border-strong: #e2dcce;
+  --accent: #7b2d26;      /* oxblood — CTAs, eyebrows, numbers, indices */
+  --accent-hover: #66231d;
+  --accent-soft: #f3e9e7; /* faint oxblood tint — badges/highlights (sparingly) */
+  --on-accent: #ffffff;
 
-  --maxw: 1600px;
-  --gutter: 56px;
-  --radius: 16px;
+  /* legacy aliases so not-yet-reskinned pages keep resolving */
+  --text: var(--ink);
+  --text-dim: var(--muted);
+  --text-faint: var(--faint);
+  --line: var(--border);
+  --hover: var(--accent);
 
-  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
-    "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
-  --font-serif: "Cormorant Garamond", "Noto Serif SC", "Songti SC", Georgia, "Times New Roman", serif;
+  --maxw: 1200px;
+  --gutter: clamp(20px, 5vw, 40px);
+  --radius: 12px;
+
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  /* kept as an alias; the reskin no longer uses serif display type */
+  --font-serif: var(--font-sans);
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur: 0.4s;
 
   color-scheme: light;
 }
@@ -31,8 +43,8 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background: #f7f6f2;
-  color: var(--text);
+  background: var(--bg);
+  color: var(--ink);
   font-family: var(--font-sans);
   font-size: 16px;
   line-height: 1.6;
@@ -45,24 +57,10 @@ a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; }
 button { font-family: inherit; cursor: pointer; }
 
-/* global warm, textured paper background (applies to every page except the
-   cover, which paints its own full-screen water background on top). */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.68' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.10'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='340' height='340'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.24' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23m)' opacity='0.05'/%3E%3C/svg%3E"),
-    radial-gradient(1000px 720px at 18% 20%, rgba(229, 64, 44, 0.045), transparent 62%),
-    radial-gradient(900px 640px at 88% 82%, rgba(193, 91, 60, 0.03), transparent 60%),
-    linear-gradient(180deg, #fbfaf7, #f4f3ef);
-  background-size: 150px 150px, 340px 340px, auto, auto, auto;
-  background-repeat: repeat, repeat, no-repeat, no-repeat, no-repeat;
-}
+/* clean flat background — the consulting look is surface + whitespace,
+   no paper texture or warm gradients. */
 
-/* layout shell — content width ~1700px */
+/* layout shell — 1200px content, generous gutters */
 .shell {
   width: 100%;
   max-width: var(--maxw);
@@ -72,46 +70,48 @@ body::before {
 
 section { position: relative; }
 
-/* section heading pattern */
+/* shared section heading pattern (now sans, ink) */
 .eyebrow {
-  font-size: 12px;
-  letter-spacing: 0.28em;
+  font-size: 11px;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--accent-soft);
-  font-weight: 500;
-  margin: 0 0 14px;
+  color: var(--accent);
+  font-weight: 600;
+  margin: 0 0 12px;
 }
 .section-title {
-  font-family: var(--font-serif);
-  font-size: clamp(26px, 3vw, 40px);
-  font-weight: 500;
-  letter-spacing: 0.01em;
-  margin: 0 0 8px;
-  line-height: 1.12;
+  font-family: var(--font-sans);
+  font-size: clamp(26px, 3.4vw, 40px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0 0 10px;
+  line-height: 1.1;
+  color: var(--ink);
 }
 .section-sub {
-  color: var(--text-dim);
-  max-width: 56ch;
+  color: var(--muted);
+  max-width: 60ch;
   margin: 0;
-  font-size: 15px;
+  font-size: 16px;
+  line-height: 1.65;
 }
 
-.section-pad { padding-block: clamp(84px, 10vw, 150px); }
+.section-pad { padding-block: clamp(64px, 8vw, 112px); }
 
 .divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--line), transparent);
+  background: var(--border);
   border: 0;
   margin: 0;
 }
 
-::selection { background: rgba(193, 91, 60, 0.18); color: var(--text); }
+::selection { background: var(--accent-soft); color: var(--accent); }
 
 /* scrollbar */
 ::-webkit-scrollbar { width: 10px; height: 10px; }
-::-webkit-scrollbar-track { background: var(--bg-2); }
-::-webkit-scrollbar-thumb { background: #d7d7d2; border-radius: 8px; }
-::-webkit-scrollbar-thumb:hover { background: #c2c2bc; }
+::-webkit-scrollbar-track { background: var(--band); }
+::-webkit-scrollbar-thumb { background: #ddd7ca; border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: #cdc6b6; }
 
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
