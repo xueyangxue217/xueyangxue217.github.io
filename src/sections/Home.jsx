@@ -89,17 +89,11 @@ export default function Home({ onNavigate }) {
               </span>
             ))}
           </h1>
-          <motion.p className="lp__sub"
+          <motion.div className="lp__sub"
             initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.45, ease: EASE }}>
-            {h.hero.subEm && h.hero.sub.includes(h.hero.subEm) ? (
-              <>
-                {h.hero.sub.split(h.hero.subEm)[0]}
-                <span className="lp__sub-em">{h.hero.subEm}</span>
-                {h.hero.sub.split(h.hero.subEm)[1]}
-              </>
-            ) : h.hero.sub}
-          </motion.p>
+            {h.hero.subLines.map((p, i) => <p key={i}>{p}</p>)}
+          </motion.div>
           <motion.div className="lp__cta-row"
             initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.55, ease: EASE }}>

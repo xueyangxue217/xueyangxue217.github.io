@@ -8,7 +8,6 @@ export default function AboutMe() {
   const { t } = useI18n();
   const { openResume } = useUI();
   const a = t.aboutme;
-  const ai = t.life?.ai; // reuse the NEIGE / gesture showcase data
 
   return (
     <div className="ab">
@@ -24,11 +23,10 @@ export default function AboutMe() {
             <img src="/assets/about/portrait.jpg" alt={a.name} loading="lazy" />
           </Reveal>
           <div className="ab__lede">
-            <Rise as="h1" className="ab__name" delay={0.05}>{a.name}</Rise>
+            <Rise as="h1" className="ab__name" delay={0.05}>{a.title}</Rise>
             <Reveal delay={0.14}>
-              <p className="ab__title">{a.title}</p>
-              <p className="ab__lead">{a.lead}</p>
               {a.bio.map((p, i) => <p key={i} className="ab__bio">{p}</p>)}
+              <p className="ab__closing">{a.closing}</p>
             </Reveal>
           </div>
         </div>
@@ -61,52 +59,6 @@ export default function AboutMe() {
             ))}
           </div>
         </section>
-
-        {/* why AI */}
-        <section className="ab__block ab__why">
-          <Reveal>
-            <p className="eyebrow">{a.whyAiTitle}</p>
-            <p className="ab__why-text">{a.whyAi}</p>
-          </Reveal>
-        </section>
-
-        {/* AI projects — reused NEIGE / gesture showcase */}
-        {ai && (
-          <section className="ab__block">
-            <Reveal>
-              <p className="eyebrow">{ai.eyebrow}</p>
-              <h2 className="ab__block-title">{ai.title}</h2>
-              <p className="ab__ai-intro">{ai.intro}</p>
-            </Reveal>
-            <div className="ab__ai-grid">
-              {ai.projects.map((p) => (
-                <Reveal key={p.id} className="aic" delay={0.06}>
-                  <div className="aic__top">
-                    <h3 className="aic__name">{p.name}</h3>
-                    <p className="aic__tag">{p.tag}</p>
-                  </div>
-                  <p className="aic__desc">{p.desc}</p>
-                  <ul className="aic__stack">
-                    {p.stack.map((s) => <li key={s}>{s}</li>)}
-                  </ul>
-                  <div className="aic__links">
-                    {p.links.map((lnk) => (
-                      <a
-                        key={lnk.url}
-                        className={`aic__link${lnk.primary ? ' aic__link--primary' : ''}`}
-                        href={lnk.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {lnk.label} ↗
-                      </a>
-                    ))}
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-          </section>
-        )}
       </div>
     </div>
   );
