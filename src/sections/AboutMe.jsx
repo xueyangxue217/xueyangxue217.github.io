@@ -23,7 +23,7 @@ export default function AboutMe() {
             <img src="/assets/about/portrait.jpg" alt={a.name} loading="lazy" />
           </Reveal>
           <div className="ab__lede">
-            <Rise as="h1" className="ab__name" delay={0.05}>{a.title}</Rise>
+            <Rise as="h1" className="ab__name" onLoad delay={0.05}>{a.title}</Rise>
             <Reveal delay={0.14}>
               {a.bio.map((p, i) => <p key={i} className="ab__bio">{p}</p>)}
               <p className="ab__closing">{a.closing}</p>

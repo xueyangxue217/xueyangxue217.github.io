@@ -26,7 +26,7 @@ export default function Contact() {
       <div className="shell co__inner">
         <div className="co__head">
           <Reveal><p className="eyebrow">{c.eyebrow}</p></Reveal>
-          <Rise as="h1" className="co__title" delay={0.05}>{c.title}</Rise>
+          <Rise as="h1" className="co__title" onLoad delay={0.05}>{c.title}</Rise>
           <Reveal delay={0.1}><p className="co__blurb">{c.blurb}</p></Reveal>
         </div>
 

@@ -135,7 +135,7 @@ export default function Work({ onBack }) {
       <div className="shell wk__index">
         <div className="wk__head">
           <Reveal><p className="eyebrow">{w.eyebrow}</p></Reveal>
-          <Rise as="h1" className="wk__title" delay={0.05}>{w.title}</Rise>
+          <Rise as="h1" className="wk__title" onLoad delay={0.05}>{w.title}</Rise>
           <Reveal delay={0.1}><p className="wk__sub">{w.sub}</p></Reveal>
         </div>
 

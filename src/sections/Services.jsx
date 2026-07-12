@@ -12,7 +12,7 @@ export default function Services({ onNavigate }) {
       <div className="shell sv__inner">
         <div className="sv__head">
           <Reveal><p className="eyebrow">{s.eyebrow}</p></Reveal>
-          <Rise as="h1" className="sv__title" delay={0.05}>{s.title}</Rise>
+          <Rise as="h1" className="sv__title" onLoad delay={0.05}>{s.title}</Rise>
           <Reveal delay={0.1}><p className="sv__intro">{s.intro}</p></Reveal>
         </div>
 
