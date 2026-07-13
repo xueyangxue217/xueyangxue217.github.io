@@ -165,6 +165,37 @@
       ]
     },
     {
+      "slug": "aolu-exhibit",
+      "title": "熬路 个展",
+      "cover": "assets/projects/aolu-exhibit/cover.jpg",
+      "images": [
+        "assets/projects/aolu-exhibit/01.jpg",
+        "assets/projects/aolu-exhibit/02.jpg",
+        "assets/projects/aolu-exhibit/03.jpg",
+        "assets/projects/aolu-exhibit/04.jpg",
+        "assets/projects/aolu-exhibit/05.jpg",
+        "assets/projects/aolu-exhibit/06.jpg",
+        "assets/projects/aolu-exhibit/07.jpg",
+        "assets/projects/aolu-exhibit/08.jpg",
+        "assets/projects/aolu-exhibit/09.jpg",
+        "assets/projects/aolu-exhibit/10.jpg",
+        "assets/projects/aolu-exhibit/11.jpg"
+      ],
+      "landscape": [
+        "assets/projects/aolu-exhibit/01.jpg",
+        "assets/projects/aolu-exhibit/02.jpg",
+        "assets/projects/aolu-exhibit/03.jpg",
+        "assets/projects/aolu-exhibit/04.jpg",
+        "assets/projects/aolu-exhibit/05.jpg",
+        "assets/projects/aolu-exhibit/06.jpg",
+        "assets/projects/aolu-exhibit/07.jpg",
+        "assets/projects/aolu-exhibit/08.jpg",
+        "assets/projects/aolu-exhibit/09.jpg",
+        "assets/projects/aolu-exhibit/10.jpg",
+        "assets/projects/aolu-exhibit/11.jpg"
+      ]
+    },
+    {
       "slug": "proj-6",
       "title": "品牌伴手礼",
       "cover": "assets/projects/proj-6/08.jpg",
@@ -186,19 +217,6 @@
         "assets/projects/proj-6/09.jpg",
         "assets/projects/proj-6/10.jpg",
         "assets/projects/proj-6/11.jpg"
-      ]
-    },
-    {
-      "slug": "aolu-exhibit",
-      "title": "熬路 个展",
-      "cover": "assets/projects/aolu-exhibit/cover.jpg",
-      "images": [
-        "assets/projects/aolu-exhibit/01.jpg",
-        "assets/projects/aolu-exhibit/02.jpg"
-      ],
-      "landscape": [
-        "assets/projects/aolu-exhibit/01.jpg",
-        "assets/projects/aolu-exhibit/02.jpg"
       ]
     }
   ],

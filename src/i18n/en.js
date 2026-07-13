@@ -579,6 +579,14 @@ export default {
         body: 'Supporting emerging local artists through strategic cultural partnerships that connect art, community and commercial space.',
       },
       {
+        slug: 'proj-3',
+        title: 'Urban Renewal · A Wuhan Journey',
+        tags: ['Urban culture · Forum & exhibition'],
+        year: '2022',
+        place: 'Wuhan, China',
+        body: '',
+      },
+      {
         slug: 'proj-1',
         title: 'Cannes Film Festival · China Film Night',
         tags: ['Cross-cultural exchange', 'Chinese brands going global'],
