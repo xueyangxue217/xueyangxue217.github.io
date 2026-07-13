@@ -158,6 +158,64 @@ export default {
     roleLabel: 'Role',
     factsLabel: 'Key facts',
     cases: {
+      'proj-6': {
+        summary: "A branded merchandise system that turns Wuhan Tiandi's lifestyle identity into memorable gifts — designed for VIP engagement, festivals, tenant collaborations, media relations and community events.",
+        sections: [
+          {
+            title: 'Challenge',
+            paras: [
+              "Develop a branded merchandise system that could consistently communicate Wuhan Tiandi's lifestyle identity while meeting the needs of different business scenarios, including VIP engagement, festivals, tenant collaboration, media relations and community events.",
+              "The challenge was to balance creativity, production quality and budget while ensuring every item reflected the brand's premium positioning and strengthened customer experience.",
+            ],
+          },
+          {
+            title: 'Approach',
+            paras: [
+              'Developed a merchandise strategy based on different audience groups and communication objectives.',
+              'Designed seasonal collections, event-exclusive gifts and partnership merchandise that combined local culture, lifestyle aesthetics and brand storytelling.',
+              'Worked closely with designers, suppliers and internal stakeholders to manage the entire process from concept development to production and quality control.',
+            ],
+          },
+          {
+            title: 'Impact',
+            paras: [
+              'Created a consistent branded merchandise system that enhanced customer engagement across marketing campaigns, VIP programmes and public events.',
+              "The merchandise became an extension of Wuhan Tiandi's lifestyle brand, strengthening emotional connections with customers while improving the overall brand experience.",
+            ],
+          },
+          {
+            title: 'My Role',
+            paras: [
+              "As Senior Brand Communications Officer, I was responsible for the end-to-end development of Wuhan Tiandi's branded merchandise programme.",
+              'Responsibilities included:',
+            ],
+            bullets: [
+              'Merchandise strategy',
+              'Creative concept development',
+              'Supplier management',
+              'Product design coordination',
+              'Production management',
+              'Budget control',
+              'Brand quality assurance',
+            ],
+          },
+          {
+            title: 'Design Principles',
+            paras: ['Every branded product should:'],
+            checks: [
+              "Reflect Wuhan Tiandi's lifestyle identity",
+              'Create memorable customer experiences',
+              'Balance aesthetics and functionality',
+              'Support long-term brand recognition',
+            ],
+          },
+        ],
+        galleries: [
+          { label: 'Ao Lu Co-branded Calendar', images: ['/assets/projects/proj-6/aolu/01.jpg', '/assets/projects/proj-6/aolu/02.jpg', '/assets/projects/proj-6/aolu/03.jpg', '/assets/projects/proj-6/aolu/04.jpg'] },
+          { label: 'Corporate Culture Calendar', images: ['/assets/projects/proj-6/culture/01.jpg', '/assets/projects/proj-6/culture/02.jpg', '/assets/projects/proj-6/culture/03.jpg', '/assets/projects/proj-6/culture/04.jpg'] },
+          { label: 'Sun Yimeng Collaboration', images: ['/assets/projects/proj-6/sunyimeng/01.jpg', '/assets/projects/proj-6/sunyimeng/02.jpg', '/assets/projects/proj-6/sunyimeng/03.jpg'] },
+        ],
+      },
       'aolu-exhibit': {
         summary: 'Supporting emerging local artists through strategic cultural partnerships that connect art, community and commercial space.',
         facts: [
@@ -450,7 +508,7 @@ export default {
       {
         slug: 'proj-6',
         eyebrow: 'Brand · Merchandise',
-        title: 'Branded Gifts & Merchandise',
+        title: 'Brand Merchandise Strategy',
         desc: 'Turning brand stories into keepsakes — co-branded gifts and city-memory merchandise.',
         url: '',
       },

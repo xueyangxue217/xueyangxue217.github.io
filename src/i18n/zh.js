@@ -157,6 +157,64 @@ export default {
     roleLabel: '角色',
     factsLabel: '关键信息',
     cases: {
+      'proj-6': {
+        summary: '一套把武汉天地生活方式身份转化为「可被记住的礼物」的品牌伴手礼体系 —— 服务于 VIP 互动、节庆、租户联名、媒体关系与社区活动。',
+        sections: [
+          {
+            title: '挑战',
+            paras: [
+              '打造一套能够持续传达武汉天地生活方式身份的品牌伴手礼体系,同时满足不同业务场景的需求,包括 VIP 互动、节庆、租户联名、媒体关系与社区活动。',
+              '挑战在于平衡创意、制作品质与预算,同时确保每一件产品都体现品牌的高端定位、强化客户体验。',
+            ],
+          },
+          {
+            title: '策略',
+            paras: [
+              '基于不同受众群体与传播目标,制定伴手礼策略。',
+              '设计季节系列、活动专属礼品与联名伴手礼,把本地文化、生活美学与品牌叙事结合。',
+              '与设计师、供应商及内部相关方紧密协作,统筹从概念开发到生产与质量控制的全流程。',
+            ],
+          },
+          {
+            title: '成果',
+            paras: [
+              '打造了一套一致的品牌伴手礼体系,在营销战役、VIP 项目与公众活动中增强了客户互动。',
+              '伴手礼成为武汉天地生活方式品牌的延伸,强化了与客户的情感连接,同时提升了整体品牌体验。',
+            ],
+          },
+          {
+            title: '我的角色',
+            paras: [
+              '作为品牌媒体高级主任,我负责武汉天地品牌伴手礼项目从头到尾的开发。',
+              '职责包括:',
+            ],
+            bullets: [
+              '伴手礼策略',
+              '创意概念开发',
+              '供应商管理',
+              '产品设计协调',
+              '生产管理',
+              '预算控制',
+              '品牌品质把控',
+            ],
+          },
+          {
+            title: '设计原则',
+            paras: ['每一件品牌产品都应当:'],
+            checks: [
+              '体现武汉天地的生活方式身份',
+              '创造难忘的客户体验',
+              '平衡美学与功能',
+              '支持长期的品牌辨识度',
+            ],
+          },
+        ],
+        galleries: [
+          { label: '熬路联名台历', images: ['/assets/projects/proj-6/aolu/01.jpg', '/assets/projects/proj-6/aolu/02.jpg', '/assets/projects/proj-6/aolu/03.jpg', '/assets/projects/proj-6/aolu/04.jpg'] },
+          { label: '企业文化定制台历', images: ['/assets/projects/proj-6/culture/01.jpg', '/assets/projects/proj-6/culture/02.jpg', '/assets/projects/proj-6/culture/03.jpg', '/assets/projects/proj-6/culture/04.jpg'] },
+          { label: 'Sun Yimeng 联名', images: ['/assets/projects/proj-6/sunyimeng/01.jpg', '/assets/projects/proj-6/sunyimeng/02.jpg', '/assets/projects/proj-6/sunyimeng/03.jpg'] },
+        ],
+      },
       'aolu-exhibit': {
         summary: '通过连接艺术、社区与商业空间的文化合作,支持本地新锐艺术家。',
         facts: [
@@ -449,7 +507,7 @@ export default {
       {
         slug: 'proj-6',
         eyebrow: '品牌 · 伴手礼',
-        title: '品牌伴手礼',
+        title: '品牌伴手礼策略',
         desc: '把品牌故事做成可带走的物件 —— 联名礼品与城市记忆文创。',
         url: '',
       },

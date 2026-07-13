@@ -18,6 +18,7 @@ const HERO_COVER = {
   'proj-4': '/assets/hero/wuhanopen.jpg',
   'proj-3': '/assets/projects/proj-3/cover.jpg',
   'aolu-exhibit': '/assets/projects/aolu-exhibit/cover.jpg',
+  'proj-6': '/assets/projects/proj-6/cover.jpg',
 };
 
 export default function Work({ openSlug = null, onOpen, onClose }) {
@@ -90,17 +91,19 @@ export default function Work({ openSlug = null, onOpen, onClose }) {
                 <p className="wk__cs-lead">{caseData.summary}</p>
               </Reveal>
 
-              <Reveal className="wk__facts">
-                <p className="wk__facts-label">{w.factsLabel}</p>
-                <div className="wk__facts-grid">
-                  {caseData.facts.map((f) => (
-                    <div key={f.k} className="wk__fact">
-                      <span className="wk__fact-k">{f.k}</span>
-                      <span className="wk__fact-v">{f.v}</span>
-                    </div>
-                  ))}
-                </div>
-              </Reveal>
+              {caseData.facts && (
+                <Reveal className="wk__facts">
+                  <p className="wk__facts-label">{w.factsLabel}</p>
+                  <div className="wk__facts-grid">
+                    {caseData.facts.map((f) => (
+                      <div key={f.k} className="wk__fact">
+                        <span className="wk__fact-k">{f.k}</span>
+                        <span className="wk__fact-v">{f.v}</span>
+                      </div>
+                    ))}
+                  </div>
+                </Reveal>
+              )}
 
               {caseData.sections.map((sec) => (
                 <Reveal key={sec.title} className="wk__section">
@@ -123,6 +126,11 @@ export default function Work({ openSlug = null, onOpen, onClose }) {
                             {sec.bullets.map((b, i) => <li key={i}>{b}</li>)}
                           </ul>
                         )}
+                        {sec.checks && (
+                          <ul className="wk__checks">
+                            {sec.checks.map((c, i) => <li key={i}>{c}</li>)}
+                          </ul>
+                        )}
                       </>
                     )}
                 </Reveal>
@@ -143,16 +151,31 @@ export default function Work({ openSlug = null, onOpen, onClose }) {
             </Reveal>
           ) : null}
 
-          <Reveal className="wk__gallery-wrap">
-            <p className="wk__cs-label">{w.galleryLabel}</p>
-            <div className="wk__gallery">
-              {active.images.map((src) => (
-                <button key={src} className="wk__shot" onClick={() => setLightbox(src)}>
-                  <img src={src} alt={active.title} loading="lazy" />
-                </button>
-              ))}
-            </div>
-          </Reveal>
+          {caseData && caseData.galleries ? (
+            caseData.galleries.map((g) => (
+              <Reveal key={g.label} className="wk__gallery-wrap">
+                <p className="wk__cs-label">{g.label}</p>
+                <div className="wk__gallery">
+                  {g.images.map((src) => (
+                    <button key={src} className="wk__shot" onClick={() => setLightbox(src)}>
+                      <img src={src} alt={g.label} loading="lazy" />
+                    </button>
+                  ))}
+                </div>
+              </Reveal>
+            ))
+          ) : (
+            <Reveal className="wk__gallery-wrap">
+              <p className="wk__cs-label">{w.galleryLabel}</p>
+              <div className="wk__gallery">
+                {active.images.map((src) => (
+                  <button key={src} className="wk__shot" onClick={() => setLightbox(src)}>
+                    <img src={src} alt={active.title} loading="lazy" />
+                  </button>
+                ))}
+              </div>
+            </Reveal>
+          )}
 
           {next && (
             <button className="wk__next" onClick={() => onOpen(next.slug)}>
