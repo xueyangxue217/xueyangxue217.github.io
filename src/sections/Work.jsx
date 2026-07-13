@@ -106,12 +106,26 @@ export default function Work({ onBack }) {
               {caseData.sections.map((sec) => (
                 <Reveal key={sec.title} className="wk__section">
                   <h2 className="wk__section-title">{sec.title}</h2>
-                  {sec.paras.map((p, i) => <p key={i} className="wk__para">{p}</p>)}
-                  {sec.bullets && (
-                    <ul className="wk__bullets">
-                      {sec.bullets.map((b, i) => <li key={i}>{b}</li>)}
-                    </ul>
-                  )}
+                  {sec.blocks
+                    ? sec.blocks.map((b, i) =>
+                        b.h ? <h3 key={i} className="wk__sub">{b.h}</h3>
+                        : b.ul ? (
+                          <ul key={i} className="wk__bullets">
+                            {b.ul.map((x, j) => <li key={j}>{x}</li>)}
+                          </ul>
+                        )
+                        : <p key={i} className="wk__para">{b.p}</p>
+                      )
+                    : (
+                      <>
+                        {sec.paras && sec.paras.map((p, i) => <p key={i} className="wk__para">{p}</p>)}
+                        {sec.bullets && (
+                          <ul className="wk__bullets">
+                            {sec.bullets.map((b, i) => <li key={i}>{b}</li>)}
+                          </ul>
+                        )}
+                      </>
+                    )}
                 </Reveal>
               ))}
             </>

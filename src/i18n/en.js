@@ -215,6 +215,85 @@ export default {
           },
         ],
       },
+      'proj-4': {
+        summary: 'Established and managed a long-term strategic partnership between Shui On Land / Wuhan Tiandi and the Wuhan Open, transforming sponsorship into an integrated brand platform that enhanced public visibility, strengthened customer engagement and supported commercial objectives across residential, retail and office businesses.',
+        facts: [
+          { k: 'Category', v: 'International Sports Partnership' },
+          { k: 'Client', v: 'Shui On Land · Wuhan Tiandi' },
+          { k: 'Partner', v: 'Wuhan Open (WTA)' },
+          { k: 'Duration', v: '2018–2023' },
+          { k: 'Location', v: 'Wuhan, China' },
+          { k: 'Role', v: 'Senior Brand Communications Officer' },
+          { k: 'Scope', v: 'Sponsorship Strategy · Partnership Development · Brand Activation · Event Management · Integrated Communications' },
+          { k: 'Major Projects', v: 'Global Ticket Launch · Youth Tennis Launch · Sponsor Pavilion · Community Tournament · Customer Engagement' },
+        ],
+        sections: [
+          {
+            title: 'Challenge',
+            paras: [
+              'As one of the official sponsors of the Wuhan Open, Shui On Land sought to maximize the long-term value of its partnership beyond traditional sponsorship exposure.',
+              'The project required balancing multiple business objectives simultaneously:',
+            ],
+            bullets: [
+              'Maximizing sponsorship efficiency by replacing a significant portion of cash sponsorship with integrated commercial resources, including venues, media channels and marketing assets.',
+              'Aligning multiple business units — residential, retail, office, property management and HR — across three major Wuhan developments to create a unified brand campaign.',
+              'Managing multiple high-profile activations throughout the tournament cycle, including the Global Ticket Launch Ceremony, Youth Tennis Program Launch, on-site sponsor experiences and community engagement events, each involving numerous external partners and suppliers.',
+              'Converting a sporting event into measurable business value — driving customer engagement, commercial traffic and residential brand influence rather than treating sponsorship as a standalone marketing activity.',
+            ],
+          },
+          {
+            title: 'Approach',
+            blocks: [
+              { p: "Developed an integrated partnership strategy that connected the Wuhan Open with Shui On Land's broader brand and business ecosystem." },
+              { h: 'Resource Integration' },
+              { p: 'Coordinated commercial spaces, event venues, advertising assets, digital media channels and community resources across three Shui On Land developments, creating a resource-exchange model that significantly improved sponsorship efficiency while reducing direct marketing expenditure.' },
+              { h: 'Cross-functional Collaboration' },
+              { p: 'Led collaboration across branding, retail operations, residential sales, office leasing, HR and property management teams, ensuring each business unit actively participated in the campaign and maximized customer engagement opportunities.' },
+              { h: 'Multi-event Brand Activation' },
+              { p: 'Planned and delivered a series of integrated brand experiences, including:' },
+              { ul: [
+                'Wuhan Open Global Ticket Launch Ceremony',
+                'Youth Tennis Program Launch',
+                'Sponsor Exhibition Booth',
+                'Customer Engagement Programs',
+                'Employee Experience Activities',
+                'Ticket Partnership Campaigns',
+                '"Lucky 123 Challenge" Community Tournament',
+              ] },
+              { p: "Each activation reinforced the partnership while extending the tournament's influence into Wuhan Tiandi's commercial ecosystem." },
+            ],
+          },
+          {
+            title: 'Impact',
+            paras: [
+              'Successfully transformed the Wuhan Open sponsorship from a traditional marketing investment into a long-term strategic brand partnership.',
+              'Key outcomes included:',
+            ],
+            bullets: [
+              "Established Wuhan Tiandi as one of the city's most recognizable lifestyle destinations associated with international sporting events.",
+              'Increased public visibility and customer engagement through year-round integrated brand activations.',
+              'Enhanced collaboration across multiple business units, allowing sponsorship resources to generate wider commercial impact.',
+              'Strengthened long-term relationships between Shui On Land and the Wuhan Open, supporting multiple consecutive years of partnership and recurring co-branded initiatives.',
+              'Created additional value through resource integration, reducing reliance on direct sponsorship expenditure while expanding campaign reach.',
+            ],
+          },
+          {
+            title: 'My Role',
+            paras: [
+              "As Senior Brand Communications Officer at Shui On Land Wuhan, I was responsible for the strategic planning, partnership management and execution of the company's Wuhan Open sponsorship programme.",
+              'My responsibilities included:',
+            ],
+            bullets: [
+              'Developing the overall sponsorship activation strategy.',
+              'Leading commercial negotiations and partnership management with the Wuhan Open organizing committee.',
+              'Coordinating cross-functional collaboration across residential, retail, office, HR and property management teams.',
+              'Managing multiple event agencies, production suppliers and external partners.',
+              'Planning and delivering major branded events, including the Global Ticket Launch Ceremony, Youth Tennis Launch, Sponsor Pavilion and customer engagement activities.',
+              'Overseeing brand communications, integrated marketing campaigns and resource coordination throughout the partnership lifecycle.',
+            ],
+          },
+        ],
+      },
     },
     more: [
       {
