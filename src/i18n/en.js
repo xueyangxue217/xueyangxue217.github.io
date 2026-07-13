@@ -34,7 +34,7 @@ export default {
     featuredTitle: 'Featured case studies',
     featured: [
       { slug: 'proj-1', cat: 'Cultural · Global', title: 'Cannes Film Festival — China Film Night', meta: 'Brand lead · 2026' },
-      { slug: 'proj-5', cat: 'Arts Season', title: 'France–China Cultural Spring · Croisements', meta: 'Brand partnership' },
+      { slug: 'proj-5', cat: 'Arts Season', title: 'Festival Croisements Collaboration', meta: 'Brand partnership' },
       { slug: 'proj-4', cat: 'Sports · Brand', title: 'Wuhan Open — Tennis Brand Partnership', meta: 'Brand partnership' },
     ],
     servicesEyebrow: 'What I Do',
@@ -428,7 +428,7 @@ export default {
       },
       {
         slug: 'proj-5',
-        title: 'Festival Croisements · Cultural Programme',
+        title: 'Festival Croisements Collaboration',
         tags: ['Art & culture', 'International exchange'],
         year: '',
         place: 'Wuhan, China',

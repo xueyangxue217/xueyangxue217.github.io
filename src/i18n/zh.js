@@ -33,7 +33,7 @@ export default {
     featuredTitle: '代表案例',
     featured: [
       { slug: 'proj-1', cat: '文化 · 国际', title: '戛纳电影节 · 中国电影之夜', meta: '品牌统筹 · 2026' },
-      { slug: 'proj-5', cat: '艺术季', title: '中法文化之春 · Croisements', meta: '品牌合作' },
+      { slug: 'proj-5', cat: '艺术季', title: '中法文化之春合作', meta: '品牌合作' },
       { slug: 'proj-4', cat: '体育 · 品牌', title: '武汉网球公开赛 · 品牌合作', meta: '品牌合作' },
     ],
     servicesEyebrow: '专业服务',
@@ -427,7 +427,7 @@ export default {
       },
       {
         slug: 'proj-5',
-        title: '中法文化之春系列活动合作',
+        title: '中法文化之春合作',
         tags: ['文化艺术', '国际交流'],
         year: '',
         place: '武汉 · 中国',
