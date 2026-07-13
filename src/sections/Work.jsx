@@ -16,8 +16,8 @@ const HERO_COVER = {
   'proj-1': '/assets/hero/cannes.jpg',
   'proj-5': '/assets/hero/croisements.jpg',
   'proj-4': '/assets/hero/wuhanopen.jpg',
-  'proj-2': '/assets/projects/proj-2/cover.jpg',
   'proj-3': '/assets/projects/proj-3/cover.jpg',
+  'aolu-exhibit': '/assets/projects/aolu-exhibit/cover.jpg',
 };
 
 export default function Work({ openSlug = null, onOpen, onClose }) {

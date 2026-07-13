@@ -50,19 +50,6 @@
       ]
     },
     {
-      "slug": "proj-2",
-      "title": "瑞安房地产入汉20周年",
-      "cover": "assets/projects/proj-2/01.jpg",
-      "images": [
-        "assets/projects/proj-2/01.jpg",
-        "assets/projects/proj-2/02.jpg"
-      ],
-      "landscape": [
-        "assets/projects/proj-2/01.jpg",
-        "assets/projects/proj-2/02.jpg"
-      ]
-    },
-    {
       "slug": "proj-3",
       "title": "武汉城市更新践行之路系列活动",
       "cover": "assets/projects/proj-3/03.jpg",
@@ -199,6 +186,19 @@
         "assets/projects/proj-6/09.jpg",
         "assets/projects/proj-6/10.jpg",
         "assets/projects/proj-6/11.jpg"
+      ]
+    },
+    {
+      "slug": "aolu-exhibit",
+      "title": "熬路 个展",
+      "cover": "assets/projects/aolu-exhibit/cover.jpg",
+      "images": [
+        "assets/projects/aolu-exhibit/01.jpg",
+        "assets/projects/aolu-exhibit/02.jpg"
+      ],
+      "landscape": [
+        "assets/projects/aolu-exhibit/01.jpg",
+        "assets/projects/aolu-exhibit/02.jpg"
       ]
     }
   ],

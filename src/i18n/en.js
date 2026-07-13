@@ -158,6 +158,57 @@ export default {
     roleLabel: 'Role',
     factsLabel: 'Key facts',
     cases: {
+      'aolu-exhibit': {
+        summary: 'Supporting emerging local artists through strategic cultural partnerships that connect art, community and commercial space.',
+        facts: [
+          { k: 'Category', v: 'Local Arts Partnership' },
+          { k: 'Client', v: 'Shui On Land Wuhan' },
+          { k: 'Artist', v: 'Ao Lu' },
+          { k: 'Partner', v: 'Hubei Fine Arts Publishing House' },
+          { k: 'Project', v: 'Ao Lu Solo Exhibition & Book Launch' },
+          { k: 'Years', v: '2019 · 2021' },
+          { k: 'Location', v: 'Wuhan Tiandi' },
+          { k: 'Role', v: 'Senior Brand Communications Officer' },
+          { k: 'Scope', v: 'Arts Partnership · Exhibition Planning · Brand Communications · Event Management' },
+        ],
+        sections: [
+          {
+            title: 'Challenge',
+            paras: [
+              "Create a meaningful partnership with emerging Wuhan artist Ao Lu, aligning the artist's creative vision, curatorial requirements and Wuhan Tiandi's brand objectives.",
+              'The project also sought to strengthen support for local cultural talent while attracting wider public attention through exhibition programming, book launches and integrated media communications.',
+            ],
+          },
+          {
+            title: 'Approach',
+            paras: [
+              'Established an exclusive partnership with artist Ao Lu, integrating his solo exhibition with book launch events to create a richer cultural experience for visitors.',
+              "Worked closely with the artist, curator and publishing partners to coordinate exhibition planning, space design, event programming and brand communications, ensuring the exhibition reflected both artistic integrity and Wuhan Tiandi's commitment to supporting local culture.",
+            ],
+          },
+          {
+            title: 'Impact',
+            paras: [
+              "Successfully hosted two exclusive solo exhibitions, strengthening Wuhan Tiandi's reputation as a platform for local artistic and cultural engagement.",
+              "The collaboration increased public participation, expanded media exposure and reinforced the brand's positioning as an urban cultural destination that actively supports emerging local artists.",
+            ],
+          },
+          {
+            title: 'My Role',
+            paras: [
+              'As Senior Brand Communications Officer at Shui On Land Wuhan, I led the project from partnership development to final delivery.',
+              'My responsibilities included:',
+            ],
+            bullets: [
+              'Identifying and developing partnerships with local artists and cultural institutions.',
+              'Leading communication and collaboration with the artist, curator and publishing partners.',
+              'Planning exhibition concepts, event programming and book launch activities.',
+              'Managing branding, media communications and on-site execution.',
+              'Building long-term relationships with local cultural partners.',
+            ],
+          },
+        ],
+      },
       'proj-1': {
         summary: 'Successfully aligned the interests of government agencies, cultural institutions, sponsors, international partners and VIP guests to deliver a world-class cultural event at the Cannes Film Festival.',
         facts: [
@@ -461,6 +512,14 @@ export default {
       },
     ],
     featured: [
+      {
+        slug: 'aolu-exhibit',
+        title: 'Ao Lu Solo Exhibition',
+        tags: ['Local Arts Partnership'],
+        year: '2019 · 2021',
+        place: 'Wuhan Tiandi',
+        body: 'Supporting emerging local artists through strategic cultural partnerships that connect art, community and commercial space.',
+      },
       {
         slug: 'proj-1',
         title: 'Cannes Film Festival · China Film Night',
