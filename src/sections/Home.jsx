@@ -123,7 +123,7 @@ export default function Home({ onNavigate }) {
         <div className="lp__work">
           {h.featured.map((f, i) => (
             <Reveal key={f.slug} delay={i * 0.08}>
-              <button className="wc" onClick={() => onNavigate('work')}>
+              <button className="wc" onClick={() => onNavigate('work', f.slug)}>
                 <motion.div className="wc__img"
                   initial={{ opacity: 0, scale: 1.06 }}
                   whileInView={{ opacity: 1, scale: 1 }}

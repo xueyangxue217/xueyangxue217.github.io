@@ -20,10 +20,9 @@ const HERO_COVER = {
   'proj-3': '/assets/projects/proj-3/cover.jpg',
 };
 
-export default function Work({ onBack }) {
+export default function Work({ openSlug = null, onOpen, onClose }) {
   const { t } = useI18n();
   const w = t.work;
-  const [openSlug, setOpenSlug] = useState(null);
   const [lightbox, setLightbox] = useState(null); // image src for full view
 
   // Merge real data: media.json galleries + featured (tags/overview/meta) +
@@ -56,7 +55,7 @@ export default function Work({ onBack }) {
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'auto' }); }, [openSlug]);
 
   useEffect(() => {
-    const onKey = (e) => e.key === 'Escape' && (lightbox ? setLightbox(null) : setOpenSlug(null));
+    const onKey = (e) => e.key === 'Escape' && (lightbox ? setLightbox(null) : onClose && onClose());
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
   }, [lightbox]);
@@ -71,7 +70,7 @@ export default function Work({ onBack }) {
     return (
       <div className="wk">
         <div className="shell wk__cs">
-          <button className="wk__back" onClick={() => setOpenSlug(null)}>{w.allWork}</button>
+          <button className="wk__back" onClick={onClose}>{w.allWork}</button>
 
           <div>
             {active.cat && <Reveal><p className="eyebrow">{active.cat}</p></Reveal>}
@@ -156,7 +155,7 @@ export default function Work({ onBack }) {
           </Reveal>
 
           {next && (
-            <button className="wk__next" onClick={() => setOpenSlug(next.slug)}>
+            <button className="wk__next" onClick={() => onOpen(next.slug)}>
               <span className="wk__next-label">{w.nextLabel}</span>
               <span className="wk__next-title">{next.title} →</span>
             </button>
@@ -187,7 +186,7 @@ export default function Work({ onBack }) {
         <div className="wk__grid">
           {projects.map((p, i) => (
             <Reveal key={p.slug} delay={(i % 3) * 0.07}>
-              <button className="pc" onClick={() => setOpenSlug(p.slug)}>
+              <button className="pc" onClick={() => onOpen(p.slug)}>
                 <motion.div className="pc__img"
                   initial={{ opacity: 0, scale: 1.06 }}
                   whileInView={{ opacity: 1, scale: 1 }}

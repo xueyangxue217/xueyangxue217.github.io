@@ -21,27 +21,30 @@ const fade = {
 };
 
 const VIEWS = ['home', 'about', 'work', 'services', 'contact'];
-const viewFromHash = () => {
-  const h = window.location.hash.replace('#', '');
-  return VIEWS.includes(h) ? h : 'home';
+// hash can be `#work` or a deep link like `#work/proj-1` (opens that case study)
+const parseHash = () => {
+  const raw = window.location.hash.replace(/^#/, '');
+  const [v, slug] = raw.split('/');
+  return { view: VIEWS.includes(v) ? v : 'home', slug: slug || null };
 };
 
 export default function App() {
-  const [view, setView] = useState(viewFromHash);
+  const [route, setRoute] = useState(parseHash);
+  const { view, slug } = route;
 
   useEffect(() => {
-    window.history.replaceState({ view }, '', `#${view}`);
-    const onPop = () => setView(viewFromHash());
+    window.history.replaceState(route, '', `#${route.view}${route.slug ? '/' + route.slug : ''}`);
+    const onPop = () => setRoute(parseHash());
     window.addEventListener('popstate', onPop);
     return () => window.removeEventListener('popstate', onPop);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const navigate = (v) => {
+  const navigate = (v, s = null) => {
     window.scrollTo({ top: 0, behavior: 'auto' });
-    if (v === view) return;
-    setView(v);
-    window.history.pushState({ view: v }, '', `#${v}`);
+    if (v === view && s === slug) return;
+    setRoute({ view: v, slug: s });
+    window.history.pushState({ view: v, slug: s }, '', `#${v}${s ? '/' + s : ''}`);
   };
   const goHome = () => navigate('home');
 
@@ -62,7 +65,7 @@ export default function App() {
           )}
           {view === 'work' && (
             <motion.div key="work" {...fade}>
-              <Work onBack={goHome} />
+              <Work openSlug={slug} onOpen={(s) => navigate('work', s)} onClose={() => navigate('work')} />
             </motion.div>
           )}
           {view === 'services' && (
