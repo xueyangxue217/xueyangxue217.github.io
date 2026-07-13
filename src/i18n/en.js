@@ -150,6 +150,7 @@ export default {
     tags: ['Brand Thinking', 'Product Design', 'AI Exploration'],
     journey: ['Idea', 'Brand', 'Prototype', 'Building MVP'],
     cta: 'View Concept',
+    live: 'Visit DayDots',
     concept: {
       eyebrow: 'Currently Building',
       title: 'DayDots',

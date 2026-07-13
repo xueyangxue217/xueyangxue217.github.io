@@ -149,6 +149,7 @@ export default {
     tags: ['品牌思维', '产品设计', 'AI 探索'],
     journey: ['想法', '品牌', '原型', '开发 MVP'],
     cta: '查看概念',
+    live: '访问 DayDots',
     concept: {
       eyebrow: '正在打造',
       title: 'DayDots',

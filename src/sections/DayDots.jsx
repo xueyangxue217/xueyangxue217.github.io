@@ -45,7 +45,10 @@ export default function DayDots({ onView }) {
             })}
           </ol>
 
-          <button className="dd__cta" onClick={onView}>{d.cta} <span aria-hidden>→</span></button>
+          <div className="dd__actions">
+            <button className="dd__cta" onClick={onView}>{d.cta} <span aria-hidden>→</span></button>
+            <a className="dd__live" href="https://www.getdaydots.com/" target="_blank" rel="noreferrer">{d.live} <span aria-hidden>↗</span></a>
+          </div>
         </div>
 
         <div className="dd__visual">

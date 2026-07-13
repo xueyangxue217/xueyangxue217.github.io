@@ -8,6 +8,7 @@ import './DayDotsConcept.css';
 export default function DayDotsConcept({ onBack }) {
   const { t } = useI18n();
   const c = t.daydots.concept;
+  const live = t.daydots.live;
 
   return (
     <div className="dc">
@@ -19,6 +20,7 @@ export default function DayDotsConcept({ onBack }) {
             <span className="dc__eyebrow"><i className="dc__dot" />{c.eyebrow}</span>
             <h1 className="dc__title">{c.title}</h1>
             <p className="dc__intro">{c.intro}</p>
+            <a className="dc__live" href="https://www.getdaydots.com/" target="_blank" rel="noreferrer">{live} <span aria-hidden>↗</span></a>
           </Reveal>
           <Reveal className="dc__hero-visual" delay={0.1}>
             <ConceptBoard />

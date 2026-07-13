@@ -31,7 +31,14 @@
   font-weight: 700; letter-spacing: -0.03em; color: var(--ink);
   margin: 18px 0 16px;
 }
-.dc__intro { font-size: clamp(16px, 1.7vw, 19px); line-height: 1.6; color: var(--muted); margin: 0; max-width: 42ch; }
+.dc__intro { font-size: clamp(16px, 1.7vw, 19px); line-height: 1.6; color: var(--muted); margin: 0 0 22px; max-width: 42ch; }
+.dc__live {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 14px; font-weight: 600; color: var(--dd-green-ink);
+  border: 1px solid #cfe4d9; padding: 9px 16px; border-radius: 10px;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+.dc__live:hover { border-color: var(--dd-green); color: var(--dd-green); }
 .dc__hero-visual { display: flex; align-items: center; }
 .dc__hero-visual .dd-board { width: 100%; height: auto; }
 
