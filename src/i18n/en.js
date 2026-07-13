@@ -343,6 +343,57 @@ export default {
           },
         ],
       },
+      'proj-3': {
+        summary: 'Transforming urban regeneration from a professional planning topic into an engaging public conversation through exhibition design, cultural programming and strategic communication.',
+        facts: [
+          { k: 'Category', v: 'Urban Regeneration & Public Exhibition' },
+          { k: 'Client', v: 'Shui On Land Wuhan' },
+          { k: 'Partners', v: 'Wuhan Planning Association · Wuhan Planning & Design Institute' },
+          { k: 'Project', v: 'Polyphony & Shadow: Wuhan Urban Regeneration Practice Road' },
+          { k: 'Year', v: '2022' },
+          { k: 'Location', v: 'Wuhan, China' },
+          { k: 'Role', v: 'Senior Brand Communications Officer' },
+          { k: 'Scope', v: 'Exhibition Planning · Public Engagement · Brand Communications · Stakeholder Coordination' },
+        ],
+        sections: [
+          {
+            title: 'Challenge',
+            paras: [
+              'Develop a public exhibition that translated complex urban regeneration concepts into an engaging and accessible experience for the general public while maintaining professional credibility.',
+              'The project required close collaboration with the Wuhan Planning Association, Wuhan Planning & Design Institute and multiple professional teams to coordinate exhibition content, planning models, historical archives and visual materials.',
+              "As one of the featured case studies, Wuhan Tiandi also needed to present its nearly 20-year urban transformation, highlighting Shui On Land's contribution to urban regeneration and its 5C Sustainability Strategy through a compelling public narrative.",
+            ],
+          },
+          {
+            title: 'Approach',
+            paras: [
+              'Worked with urban planners, architects and cultural partners to develop an exhibition that combined professional planning content with immersive storytelling, making urban regeneration more accessible to a wider audience.',
+              "Beyond the exhibition itself, curated a series of public engagement programmes, including expert talks, photography salons, live-stream discussions and interviews with leading urban planners, extending the project's influence beyond the exhibition space.",
+            ],
+          },
+          {
+            title: 'Impact',
+            paras: [
+              "Successfully positioned Wuhan Tiandi as one of Wuhan's landmark urban regeneration projects while strengthening public awareness of Shui On Land's long-term commitment to sustainable urban development.",
+              'The exhibition created meaningful dialogue between professionals and the public, enhancing brand reputation through cultural programming and thought leadership rather than conventional marketing.',
+            ],
+          },
+          {
+            title: 'My Role',
+            paras: [
+              'As Senior Brand Communications Officer at Shui On Land Wuhan, I led the project from concept development through delivery.',
+              'My responsibilities included:',
+            ],
+            bullets: [
+              'Planning the overall exhibition and communication strategy.',
+              'Coordinating content development with urban planning institutions and internal stakeholders.',
+              'Managing exhibition production, branding and public communications.',
+              'Organizing expert forums, public lectures and community engagement activities.',
+              'Overseeing project execution, media communications and cross-functional coordination.',
+            ],
+          },
+        ],
+      },
     },
     more: [
       {
