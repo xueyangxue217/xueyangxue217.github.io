@@ -156,6 +156,66 @@ export default {
     nextLabel: 'Next project',
     allWork: '← All work',
     roleLabel: 'Role',
+    factsLabel: 'Key facts',
+    cases: {
+      'proj-1': {
+        summary: 'Successfully aligned the interests of government agencies, cultural institutions, sponsors, international partners and VIP guests to deliver a world-class cultural event at the Cannes Film Festival.',
+        facts: [
+          { k: 'Category', v: 'International Cultural Event' },
+          { k: 'Client', v: 'China Film Foundation' },
+          { k: 'Event', v: 'China Film Night · Cannes Film Festival' },
+          { k: 'Location', v: 'Cannes, France' },
+          { k: 'Year', v: '2026' },
+          { k: 'Audience', v: '100+ invited guests' },
+          { k: 'Stakeholders', v: 'Government · International Organizations · Film Industry · Sponsors · Media' },
+          { k: 'Scope', v: 'Strategy · Partnerships · Guest Management · International Communications · Event Delivery' },
+        ],
+        sections: [
+          {
+            title: 'Challenge',
+            paras: [
+              'Delivering China Film Night at the 2026 Cannes Film Festival required orchestrating a highly complex international event involving multiple stakeholders, cross-border operations and high-profile guest management.',
+              "The project brought together government agencies, cultural institutions, commercial partners and sponsors, each with distinct objectives and expectations. At the same time, every stage of the event — from branding and venue coordination to guest experience and international communications — had to meet the standards of one of the world's most prestigious film festivals.",
+              'The event also featured an invitation-only guest list of more than one hundred distinguished attendees, including government representatives, leaders of international organizations, renowned filmmakers, festival presidents and public figures, requiring meticulous planning and seamless on-site coordination.',
+              'Adding to the complexity, the event was themed around Chinese Cuisine, with chefs, ingredients and supporting materials transported from China to France. This required close collaboration between Chinese production teams and French venue operators, hospitality staff and local event crews to ensure flawless execution.',
+              "Finally, coordinating official photography, international media coverage and post-event content approvals across multiple stakeholders was essential to maximizing the event's global visibility.",
+            ],
+          },
+          {
+            title: 'Approach',
+            paras: [
+              'Developed and coordinated an end-to-end project management and international communication framework covering stakeholder engagement, partnership coordination, guest management, operational planning and media strategy.',
+              'Established clear communication channels among organizers, sponsors, international partners and local execution teams to ensure efficient decision-making throughout the project lifecycle.',
+              'Led cross-cultural coordination between Chinese and French teams, aligning logistics, hospitality, branding and event operations while maintaining a consistent guest experience.',
+              'Designed an integrated communication workflow that synchronized official media, photography, international press and post-event content distribution, ensuring accurate and timely global communication.',
+            ],
+          },
+          {
+            title: 'Impact',
+            paras: [
+              'Successfully delivered one of the flagship events of the China Pavilion during the Cannes Film Festival, bringing together over one hundred influential guests from the international film industry, government and cultural sectors.',
+              'The event strengthened the international visibility of Chinese cinema and created a high-level platform for dialogue, partnership and cultural exchange between China and the global film community.',
+              'Through coordinated international communications and media engagement, the event generated extensive domestic and overseas media coverage, reinforcing the global presence of China Film Night as a key cultural diplomacy initiative.',
+            ],
+          },
+          {
+            title: 'My Role',
+            paras: [
+              'As Project Manager representing the China Film Foundation, I was responsible for the overall coordination and delivery of China Film Night.',
+              'My responsibilities included:',
+            ],
+            bullets: [
+              'Leading cross-functional collaboration among organizers, sponsors and strategic partners.',
+              'Coordinating high-level guest invitations, protocol and on-site experience.',
+              'Managing cross-border communication between Chinese teams and French venue, hospitality and production partners.',
+              'Overseeing branding, event operations and execution planning.',
+              'Coordinating official photography, international media relations and post-event communication materials.',
+              'Ensuring all stakeholder objectives were successfully delivered while maintaining a seamless event experience from planning through execution.',
+            ],
+          },
+        ],
+      },
+    },
     more: [
       {
         slug: 'proj-6',

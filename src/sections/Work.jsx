@@ -48,6 +48,7 @@ export default function Work({ onBack }) {
   }, [w.featured, w.more]);
 
   const active = projects.find((p) => p.slug === openSlug) || null;
+  const caseData = active ? (w.cases || {})[active.slug] : null;
   const activeIdx = projects.findIndex((p) => p.slug === openSlug);
   const next = activeIdx >= 0 ? projects[(activeIdx + 1) % projects.length] : null;
 
@@ -84,7 +85,37 @@ export default function Work({ onBack }) {
             <img src={active.cover} alt={active.title} />
           </motion.div>
 
-          {active.overview && (
+          {caseData ? (
+            <>
+              <Reveal className="wk__cs-body">
+                <p className="wk__cs-lead">{caseData.summary}</p>
+              </Reveal>
+
+              <Reveal className="wk__facts">
+                <p className="wk__facts-label">{w.factsLabel}</p>
+                <div className="wk__facts-grid">
+                  {caseData.facts.map((f) => (
+                    <div key={f.k} className="wk__fact">
+                      <span className="wk__fact-k">{f.k}</span>
+                      <span className="wk__fact-v">{f.v}</span>
+                    </div>
+                  ))}
+                </div>
+              </Reveal>
+
+              {caseData.sections.map((sec) => (
+                <Reveal key={sec.title} className="wk__section">
+                  <h2 className="wk__section-title">{sec.title}</h2>
+                  {sec.paras.map((p, i) => <p key={i} className="wk__para">{p}</p>)}
+                  {sec.bullets && (
+                    <ul className="wk__bullets">
+                      {sec.bullets.map((b, i) => <li key={i}>{b}</li>)}
+                    </ul>
+                  )}
+                </Reveal>
+              ))}
+            </>
+          ) : active.overview ? (
             <Reveal className="wk__cs-body">
               <p className="wk__cs-label">{w.overviewLabel}</p>
               <p className="wk__cs-overview">{active.overview}</p>
@@ -97,7 +128,7 @@ export default function Work({ onBack }) {
                 <a className="wk__press" href={active.press} target="_blank" rel="noreferrer">{w.pressCta}</a>
               )}
             </Reveal>
-          )}
+          ) : null}
 
           <Reveal className="wk__gallery-wrap">
             <p className="wk__cs-label">{w.galleryLabel}</p>
