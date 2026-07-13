@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'motion/react';
 import { useI18n } from '../i18n';
 import Reveal from '../components/Reveal';
 import Rise from '../components/Rise';
+import DayDots from './DayDots';
 import media from '../data/media.json';
 import './Work.css';
 
@@ -21,7 +22,7 @@ const HERO_COVER = {
   'proj-6': '/assets/projects/proj-6/cover.jpg',
 };
 
-export default function Work({ openSlug = null, onOpen, onClose }) {
+export default function Work({ openSlug = null, onOpen, onClose, onNavigate }) {
   const { t } = useI18n();
   const w = t.work;
   const [lightbox, setLightbox] = useState(null); // image src for full view
@@ -225,12 +226,7 @@ export default function Work({ openSlug = null, onOpen, onClose }) {
           ))}
         </div>
 
-        <Reveal className="wk__clients">
-          <p className="eyebrow">{w.clientsLabel}</p>
-          <ul className="wk__clients-list">
-            {w.clients.map((c) => <li key={c}>{c}</li>)}
-          </ul>
-        </Reveal>
+        <DayDots onView={() => onNavigate && onNavigate('concept')} />
       </div>
     </div>
   );

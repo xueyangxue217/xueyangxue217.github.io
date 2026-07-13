@@ -137,6 +137,31 @@ export default {
     ctaText: 'Tell me what you’re building — I’ll tell you how I can help.',
     ctaBtn: "Let's Talk",
   },
+  daydots: {
+    badge: 'Currently Building',
+    title: 'DayDots',
+    subtitle: 'A personal exploration into AI-powered product creation.',
+    status: 'Building MVP',
+    whyTitle: 'Why DayDots',
+    why: [
+      "After years of creating brand experiences, I'm now exploring how thoughtful digital products can become part of everyday life.",
+      'DayDots is where I experiment with product thinking, interaction design and AI-assisted workflows.',
+    ],
+    tags: ['Brand Thinking', 'Product Design', 'AI Exploration'],
+    journey: ['Idea', 'Brand', 'Prototype', 'Building MVP'],
+    cta: 'View Concept',
+    concept: {
+      eyebrow: 'Currently Building',
+      title: 'DayDots',
+      intro: 'A personal exploration into AI-powered product creation — a quiet, ongoing experiment in product thinking and everyday design.',
+      back: 'Back to work',
+      sections: [
+        { h: 'Product Vision', p: 'DayDots explores how small, thoughtful digital moments can fit gently into everyday life — less an app that competes for attention, more a quiet companion. The goal is honesty and calm, not engagement metrics.' },
+        { h: 'Design Process', p: 'It begins the way brand work does — with people and intent — then moves through sketches, brand and interaction design into working prototypes. AI is used as a collaborator, shortening the path from idea to something real.' },
+        { h: 'Current Progress', p: "Currently building the MVP. It's early, unfinished and evolving — and this page will grow as the work does." },
+      ],
+    },
+  },
   work: {
     eyebrow: 'WORK',
     back: 'Back to contents',

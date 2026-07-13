@@ -7,6 +7,7 @@ import Home from './sections/Home';
 import AboutMe from './sections/AboutMe';
 import Work from './sections/Work';
 import Services from './sections/Services';
+import DayDotsConcept from './sections/DayDotsConcept';
 import Contact from './sections/Contact';
 
 // Consulting site. Landing is the Home hero (no cover gate). Sections are
@@ -20,7 +21,7 @@ const fade = {
   transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] },
 };
 
-const VIEWS = ['home', 'about', 'work', 'services', 'contact'];
+const VIEWS = ['home', 'about', 'work', 'services', 'concept', 'contact'];
 // hash can be `#work` or a deep link like `#work/proj-1` (opens that case study)
 const parseHash = () => {
   const raw = window.location.hash.replace(/^#/, '');
@@ -65,12 +66,17 @@ export default function App() {
           )}
           {view === 'work' && (
             <motion.div key="work" {...fade}>
-              <Work openSlug={slug} onOpen={(s) => navigate('work', s)} onClose={() => navigate('work')} />
+              <Work openSlug={slug} onOpen={(s) => navigate('work', s)} onClose={() => navigate('work')} onNavigate={navigate} />
             </motion.div>
           )}
           {view === 'services' && (
             <motion.div key="services" {...fade}>
               <Services onNavigate={navigate} />
+            </motion.div>
+          )}
+          {view === 'concept' && (
+            <motion.div key="concept" {...fade}>
+              <DayDotsConcept onBack={() => navigate('work')} />
             </motion.div>
           )}
           {view === 'contact' && (
