@@ -294,6 +294,55 @@ export default {
           },
         ],
       },
+      'proj-5': {
+        summary: "A seven-year cultural partnership between Shui On Land Wuhan and the French Consulate General in Wuhan — integrating Festival Croisements and the Mois franco-chinois de l'environnement into Wuhan Tiandi's brand, delivering nearly 20 cultural programmes from 2018 to 2024.",
+        facts: [
+          { k: 'Category', v: 'International Cultural Partnership' },
+          { k: 'Client', v: 'Shui On Land Wuhan' },
+          { k: 'Partner', v: 'French Consulate General in Wuhan' },
+          { k: 'Programmes', v: "Festival Croisements · Mois franco-chinois de l'environnement" },
+          { k: 'Duration', v: '2018–2024 (7 Years)' },
+          { k: 'Events', v: 'Nearly 20 Cultural Programmes' },
+          { k: 'Scope', v: 'Partnership Strategy · Brand Activation · Cultural Programming · Integrated Communications' },
+        ],
+        sections: [
+          {
+            title: 'Challenge',
+            paras: [
+              'Develop a long-term cultural partnership between Shui On Land Wuhan and the French Consulate General in Wuhan, aligning the branding objectives, business priorities and venue characteristics of three Shui On Land developments with internationally recognised cultural programmes.',
+              'The project also required delivering high-quality public events under limited budgets while coordinating French institutions, artists, local partners and multiple internal teams.',
+            ],
+          },
+          {
+            title: 'Strategic Approach',
+            paras: [
+              "Established a sustainable partnership framework with the French Consulate General in Wuhan, integrating Festival Croisements and the Mois franco-chinois de l'environnement into Shui On Land's annual branding strategy.",
+              'Tailored each programme to different project needs, coordinated cross-functional teams and external partners, and maximised existing venues and marketing resources to deliver high-quality cultural experiences with efficient budget management.',
+            ],
+          },
+          {
+            title: 'Business Impact',
+            paras: [
+              "Built a trusted seven-year partnership, delivering nearly 20 cultural programmes that enhanced Wuhan Tiandi's reputation as an international lifestyle destination.",
+              'The collaboration strengthened brand visibility, increased community engagement and demonstrated how cultural partnerships can create long-term brand value beyond traditional marketing.',
+            ],
+          },
+          {
+            title: 'My Role',
+            paras: [
+              'As Senior Brand Communications Officer, I led the strategic planning and execution of all collaborative programmes with the French Consulate General in Wuhan.',
+              'My responsibilities included:',
+            ],
+            bullets: [
+              'Developing long-term partnership strategies.',
+              'Selecting programmes based on project positioning and marketing objectives.',
+              'Managing communication with French institutions and international partners.',
+              'Coordinating internal teams, agencies and suppliers.',
+              'Overseeing project delivery, branding and integrated communications.',
+            ],
+          },
+        ],
+      },
     },
     more: [
       {
