@@ -424,7 +424,7 @@ export default {
         ],
       },
       'proj-5': {
-        summary: "A seven-year cultural partnership between Shui On Land Wuhan and the French Consulate General in Wuhan — integrating Festival Croisements and the Mois franco-chinois de l'environnement into Wuhan Tiandi's brand, delivering nearly 20 cultural programmes from 2018 to 2024.",
+        summary: "Nearly a decade of cultural partnership between Shui On Land · Wuhan Tiandi and the French Consulate General in Wuhan — successfully weaving acclaimed Festival Croisements and Mois franco-chinois de l'environnement programmes into Wuhan Tiandi's brand campaigns, with nearly 20 cultural programmes delivered from 2018 to 2024.",
         facts: [
           { k: 'Category', v: 'International Cultural Partnership' },
           { k: 'Client', v: 'Shui On Land · Wuhan Tiandi' },
