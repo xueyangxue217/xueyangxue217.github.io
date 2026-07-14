@@ -240,7 +240,7 @@ export default {
         summary: 'Supporting emerging local artists through strategic cultural partnerships that connect art, community and commercial space.',
         facts: [
           { k: 'Category', v: 'Local Arts Partnership' },
-          { k: 'Client', v: 'Shui On Land Wuhan' },
+          { k: 'Client', v: 'Shui On Land · Wuhan Tiandi' },
           { k: 'Artist', v: 'Ao Lu' },
           { k: 'Partner', v: 'Hubei Fine Arts Publishing House' },
           { k: 'Project', v: 'Ao Lu Solo Exhibition & Book Launch' },
@@ -427,7 +427,7 @@ export default {
         summary: "A seven-year cultural partnership between Shui On Land Wuhan and the French Consulate General in Wuhan — integrating Festival Croisements and the Mois franco-chinois de l'environnement into Wuhan Tiandi's brand, delivering nearly 20 cultural programmes from 2018 to 2024.",
         facts: [
           { k: 'Category', v: 'International Cultural Partnership' },
-          { k: 'Client', v: 'Shui On Land Wuhan' },
+          { k: 'Client', v: 'Shui On Land · Wuhan Tiandi' },
           { k: 'Partner', v: 'French Consulate General in Wuhan' },
           { k: 'Programmes', v: "Festival Croisements · Mois franco-chinois de l'environnement" },
           { k: 'Duration', v: '2018–2024 (7 Years)' },
@@ -476,7 +476,7 @@ export default {
         summary: 'Transforming urban regeneration from a professional planning topic into an engaging public conversation through exhibition design, cultural programming and strategic communication.',
         facts: [
           { k: 'Category', v: 'Urban Regeneration & Public Exhibition' },
-          { k: 'Client', v: 'Shui On Land Wuhan' },
+          { k: 'Client', v: 'Shui On Land · Wuhan Tiandi' },
           { k: 'Partners', v: 'Wuhan Planning Association · Wuhan Planning & Design Institute' },
           { k: 'Project', v: 'Polyphony & Shadow: Wuhan Urban Regeneration Practice Road' },
           { k: 'Year', v: '2022' },
