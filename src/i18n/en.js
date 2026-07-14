@@ -48,7 +48,7 @@ export default {
     ctaTitle: "Let's build something worth remembering.",
     ctaText: 'Open to full-time opportunities, consulting projects and collaborations.',
     ctaBtn: "Let's Talk",
-    footer: { rights: '© 2026 Xue Yang', tagline: 'Brand strategy · Partnerships · AI products' },
+    footer: { rights: '© 2026 Xue Yang', tagline: 'Brand Strategy · Partnerships · Cultural Communication' },
   },
   aboutme: {
     eyebrow: 'Global Brand Strategy · Partnership Development · Cultural Communication',
@@ -354,7 +354,7 @@ export default {
           { k: 'Location', v: 'Wuhan, China' },
           { k: 'Role', v: 'Senior Brand Communications Officer' },
           { k: 'Scope', v: 'Sponsorship Strategy · Partnership Development · Brand Activation · Event Management · Integrated Communications' },
-          { k: 'Major Projects', v: 'Global Ticket Launch · Youth Tennis Launch · Sponsor Pavilion · Community Tournament · Customer Engagement' },
+          { k: 'Major Projects', v: 'Global Ticket Launch · Youth Tennis Launch · Sponsor Booth · Community Tournament · Customer Engagement' },
         ],
         sections: [
           {
@@ -383,10 +383,10 @@ export default {
               { ul: [
                 'Wuhan Open Global Ticket Launch Ceremony',
                 'Youth Tennis Program Launch',
-                'Sponsor Exhibition Booth',
+                'Sponsor Booth',
                 'Customer Engagement Programs',
-                'Employee Experience Activities',
-                'Ticket Partnership Campaigns',
+                'Employee Benefits',
+                'Ticketing Partnership',
                 '"Lucky 123 Challenge" Community Tournament',
               ] },
               { p: "Each activation reinforced the partnership while extending the tournament's influence into Wuhan Tiandi's commercial ecosystem." },
@@ -417,14 +417,14 @@ export default {
               'Leading commercial negotiations and partnership management with the Wuhan Open organizing committee.',
               'Coordinating cross-functional collaboration across residential, retail, office, HR and property management teams.',
               'Managing multiple event agencies, production suppliers and external partners.',
-              'Planning and delivering major branded events, including the Global Ticket Launch Ceremony, Youth Tennis Launch, Sponsor Pavilion and customer engagement activities.',
+              'Planning and delivering major branded events, including the Global Ticket Launch Ceremony, Youth Tennis Launch, Sponsor Booth and customer engagement activities.',
               'Overseeing brand communications, integrated marketing campaigns and resource coordination throughout the partnership lifecycle.',
             ],
           },
         ],
       },
       'proj-5': {
-        summary: "Nearly a decade of cultural partnership between Shui On Land · Wuhan Tiandi and the French Consulate General in Wuhan — successfully weaving acclaimed Festival Croisements and Mois franco-chinois de l'environnement programmes into Wuhan Tiandi's brand campaigns, with nearly 20 cultural programmes delivered from 2018 to 2024.",
+        summary: "Nearly 7 years of cultural partnership between Shui On Land · Wuhan Tiandi and the French Consulate General in Wuhan — successfully weaving acclaimed Festival Croisements and Mois franco-chinois de l'environnement programmes into Wuhan Tiandi's brand campaigns, with nearly 20 cultural programmes delivered from 2018 to 2024.",
         facts: [
           { k: 'Category', v: 'International Cultural Partnership' },
           { k: 'Client', v: 'Shui On Land · Wuhan Tiandi' },
