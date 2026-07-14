@@ -88,6 +88,7 @@
   letter-spacing: -0.03em;
   line-height: 1;
   color: var(--accent);
+  font-variant-numeric: tabular-nums;   /* fixed-width digits — no jitter while counting */
 }
 .stat__l {
   display: block;

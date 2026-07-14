@@ -57,6 +57,13 @@ a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; }
 button { font-family: inherit; cursor: pointer; }
 
+/* typographic polish (progressive — unsupported browsers ignore) */
+body { hanging-punctuation: first allow-end last; }
+h1, h2, h3, .section-title { text-wrap: balance; }   /* even multi-line headings */
+p, li { text-wrap: pretty; }                          /* no orphan last words */
+/* slightly airier leading for Chinese body text */
+html[lang="zh-CN"] body { line-height: 1.72; }
+
 /* clean flat background — the consulting look is surface + whitespace,
    no paper texture or warm gradients. */
 
