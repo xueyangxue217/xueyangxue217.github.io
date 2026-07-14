@@ -3,7 +3,9 @@ import Reveal from '../components/Reveal';
 import Rise from '../components/Rise';
 import './Services.css';
 
-export default function Services({ onNavigate }) {
+// "How I Create Value" — three timeless cards showing how I think, design and
+// build. Not a service list; a window into approach. Subtle green on hover.
+export default function Services() {
   const { t } = useI18n();
   const s = t.services;
 
@@ -16,45 +18,31 @@ export default function Services({ onNavigate }) {
           <Reveal delay={0.1}><p className="sv__intro">{s.intro}</p></Reveal>
         </div>
 
-        {/* expanded services */}
-        <div className="sv__list">
-          {s.items.map((it, i) => (
-            <Reveal key={it.n} className="svc-row" delay={(i % 2) * 0.05}>
-              <div className="svc-row__n">{it.n}</div>
-              <div className="svc-row__body">
-                <h2 className="svc-row__name">{it.name}</h2>
-                <p className="svc-row__lead">{it.lead}</p>
-                <ul className="svc-row__points">
-                  {it.points.map((p) => <li key={p}>{p}</li>)}
+        <div className="sv__cards">
+          {s.cards.map((c, i) => (
+            <Reveal key={c.n} delay={i * 0.08}>
+              <article className="svc-card">
+                <span className="svc-card__n">{c.n}</span>
+                <h2 className="svc-card__title">{c.title}</h2>
+                <p className="svc-card__lead">{c.lead}</p>
+                <p className="svc-card__body">{c.body}</p>
+
+                <ul className="svc-card__tags">
+                  {c.tags.map((tg) => <li key={tg}>{tg}</li>)}
                 </ul>
-                <p className="svc-row__for">{it.for}</p>
-              </div>
+
+                <div className="svc-card__process">
+                  {c.process.map((p, j) => (
+                    <span key={p} className="svc-card__step">
+                      {p}
+                      {j < c.process.length - 1 && <span className="svc-card__arrow" aria-hidden>→</span>}
+                    </span>
+                  ))}
+                </div>
+              </article>
             </Reveal>
           ))}
         </div>
-
-        {/* how we work */}
-        <section className="sv__how">
-          <Reveal><h2 className="sv__how-title">{s.howTitle}</h2></Reveal>
-          <div className="sv__how-grid">
-            {s.how.map((step, i) => (
-              <Reveal key={step.n} className="how" delay={i * 0.06}>
-                <p className="how__n">{step.n}</p>
-                <h3 className="how__t">{step.t}</h3>
-                <p className="how__d">{step.d}</p>
-              </Reveal>
-            ))}
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="sv__cta">
-          <Reveal>
-            <h2 className="sv__cta-title">{s.ctaTitle}</h2>
-            <p className="sv__cta-text">{s.ctaText}</p>
-            <button className="btn btn--solid" onClick={() => onNavigate('contact')}>{s.ctaBtn}</button>
-          </Reveal>
-        </section>
       </div>
     </div>
   );
