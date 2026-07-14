@@ -772,7 +772,7 @@ export default {
   contact: {
     back: 'Back',
     eyebrow: 'Contact',
-    title: "Let's work together.",
+    title: "Let's Work Together",
     blurb: 'Open to full-time opportunities, consulting projects and collaborations.',
     resumeLabel: 'Résumé',
     resumeCta: 'Download ↓',
